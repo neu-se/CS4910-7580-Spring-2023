@@ -4,12 +4,12 @@ title: Home
 nav_exclude: true
 seo:
   type: Course
-  name: CS 4910/7580, Advanced Software Engineering
+  name: CS 4973/7580, Advanced Software Engineering
 ---
 
 # {{ site.tagline }}
 {: .mb-2 }
-CS 4910/7580, Spring 2023, Tues 11:45-1:25pm/Thurs 2:50-4:30pm, Kariotis Hall 209
+CS 4973/7580, Spring 2023, Tues 11:45-1:25pm/Thurs 2:50-4:30pm, Kariotis Hall 209
 {: .fs-6 .fw-300 }
 
 {% if site.announcements %}
