@@ -22,7 +22,7 @@ url: 'https://neu-se.github.io' # the base hostname & protocol for your site, e.
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md", "disabled", "vendor", "_plugins", "temp"]
 
 # Theme settings
-remote_theme: pmarsceill/just-the-docs@v0.3.3
+theme: just-the-docs
 color_scheme: neu
 search_enabled: true
 heading_anchors: true
@@ -82,3 +82,6 @@ scholar:
   bibliography_template: cv-bib
   bibtex_filters:
     - latex
+  
+last-modified-at:
+  date-format: '%b %d, %y %H:%M %Z'
