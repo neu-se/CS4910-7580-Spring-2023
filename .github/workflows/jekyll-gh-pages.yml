@@ -22,29 +22,15 @@ concurrency:
 
 jobs:
   # Build job
-  build:
+  github-pages:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - uses: actions/checkout@v2
+      - uses: helaili/jekyll-action@v2
         with:
-          source: ./
-          destination: ./_site
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+          token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          CANVAS_TOKEN: ${{secrets.CANVAS_TOKEN}}
+          CANVAS_COURSE_ID: ${{secrets.CANVAS_COURSE_ID}}
+          CANVAS_BASE_URL: ${{ secrets.CANVAS_BASE_URL }}
+          JEKYLL_NO_BUNDLER_REQUIRE: true
