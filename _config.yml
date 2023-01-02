@@ -19,7 +19,7 @@ description: Northeastern University CS 4793/7580 "Advanced Software Engineering
 author: Jonathan Bell
 baseurl: '/CS4910-7580-Spring-2023' # the subpath of your site, e.g. /blog
 url: '' # the base hostname & protocol for your site, e.g. http://example.com
-exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md", "disabled"]
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md", "disabled", "vendor", "_plugins", "temp"]
 
 # Theme settings
 remote_theme: pmarsceill/just-the-docs@v0.3.3
