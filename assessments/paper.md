@@ -1,9 +1,10 @@
 ---
-layout: page
+layout: assignment
 parent: Assessments
 title: Reflection Paper
 description: Description of Course Paper
 nav_order: 1
+due_date: "Thursday Mar 2, 11:59pm ET"
 ---
 
 # Reflection Paper

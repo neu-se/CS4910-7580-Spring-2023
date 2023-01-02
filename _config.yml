@@ -71,4 +71,14 @@ compress_html:
   profile: false
 
 plugins:
+  # - jekyll-canvas-lms
   - jekyll-seo-tag
+  - jekyll-scholar
+
+scholar:
+  style: assets/style.csl
+  sort_by: year
+  order: desc
+  bibliography_template: cv-bib
+  bibtex_filters:
+    - latex

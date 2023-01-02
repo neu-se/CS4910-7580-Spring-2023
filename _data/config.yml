@@ -1,0 +1,8 @@
+types:
+  default:
+    className: lesson
+  holiday:
+    className: holiday
+dates:
+  firstMonday: 2023/01/09
+  numWeeks: 15

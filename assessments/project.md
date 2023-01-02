@@ -1,9 +1,10 @@
 ---
-layout: page
+layout: assignment
 title: Implementation Project
 parent: Assessments
 nav_order: 2
 description: Description of Course Project
+due_date: "Thursday April 20, 11:59pm ET"
 ---
 
 # Implementation Project

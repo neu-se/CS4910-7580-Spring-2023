@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 title: Home
 nav_exclude: true
 seo:
