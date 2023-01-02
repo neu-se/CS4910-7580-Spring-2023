@@ -18,7 +18,7 @@ tagline: Advanced Software Engineering
 description: Northeastern University CS 4793/7580 "Advanced Software Engineering", Spring 2023. Professor Jonathan Bell.
 author: Jonathan Bell
 baseurl: '/CS4910-7580-Spring-2023' # the subpath of your site, e.g. /blog
-url: '' # the base hostname & protocol for your site, e.g. http://example.com
+url: 'https://neu-se.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md", "disabled", "vendor", "_plugins", "temp"]
 
 # Theme settings
