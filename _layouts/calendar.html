@@ -13,28 +13,16 @@ layout: default
   {% assign days = "Mon,Tue,Wed,Thu,Fri" | split: "," %}
   {% for wk in (1..site.data.config.dates.numWeeks) %}
   {% capture wID %}{{ wk }}{% endcapture %}
+  {% assign week=page.weeks[wID] %}
   <tr>
-    {% assign week=page.weeks[wID] %}
-    <td class="week-label">Week {{wID}}: {{ week.topic }}</td>
+    <td colspan="2" class="week-label">Week {{wID}}: {{ week.topic }}</td>
+  </tr>
+  <tr>
     {% for day in days %}
+    {% if week[day] %}
     <td class="{{day}}">
-      {% if site.data.config.deadlines[wID][day] or week[day] %}
       <div class="day">
-        {% if site.data.config.deadlines[wID][day] %}
-        {% assign c = site.data.config.deadlines[wID][day] %}
-        <div class="date">{{ c.date | date: "%a, %b %d" }}</div>
-        <div class="content assignment">
-          {% assign m = site.data.modules[c.content] %}
-          {% if m.page %}
-          <a href="{{site.baseurl}}{{ m.page }}">{{ m.name }}</a>
-          {% else %}
-          {{ m.name }}
-          {% endif %}
-          <div class="deadline">Due at {{ c.date | date: "%I:%M %P" }}</div>
-        </div>
-        {% elsif week[day] %}
         <div class="date">{{ week[day].date | date: "%a, %b %d" }}</div>
-        {% endif %}
         {% assign m = week[day] %}
         {% assign className = site.data.sections.types.default.className %}
         {% if site.data.config.types[m.type] %}
@@ -46,35 +34,60 @@ layout: default
           {% else %}
           <i>{{ m.name }}</i>
           {% endif %}
+          {% if m.required %}
+          <div class="readings">Required Readings:
+            <ol>
+              {% for r in m.required %}
+              <li class="reading">
+                {{ r | markdownify }}
+              </li>
+              {% endfor %}
+            </ol>
+          </div>
+          {% endif %}
+
           {% if m.readings %}
           <div class="readings">Required Readings:
             <ol>
               {% for r in m.readings %}
               <li class="reading">
-                {% cite r %}
+                {% reference r %}
               </li>
               {% endfor %}
             </ol>
           </div>
+          {% endif %}
+          {% if m.optional %}
+          Optional Readings:
+          <ol>
+            {% for r in m.optional %}
+            <li class="reading">{% cite r %}</li>
+            {% endfor %}
+          </ol>
+          {% endif %}
         </div>
-        {% endif %}
-        {% if m.optional %}
-        Optional Readings:
-        {% for r in m.optional %}
-        <div class="reading">
-          {% cite r %}
-        </div>
-        {% endfor %}
-        {% endif %}
         <div class="note">{{ week[day].note | markdownify }}</div>
       </div>
+      {% if m.deliverable %}
+      <div class="content assignment">
+        {% if m.deliverable.page %}
+        <a href="{{site.baseurl}}{{ m.deliverable.page }}">{{ m.deliverable.name }}</a>
+        {% else %}
+        {{ m.deliverable.name }}
+        {% endif %}
+        Due at 11:00am
       </div>
       {% endif %}
+      </div>
     </td>
+    {% endif %}
+
     {% endfor %}
   </tr>
   {% endfor %}
 </table>
+
+<h3>Bibliography of optional readings:</h3>
 
 {% bibliography --cited --cited_in_order %}
 

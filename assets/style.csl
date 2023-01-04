@@ -111,7 +111,7 @@
     </sort>
     <layout delimiter="; ">
       <group delimiter=", ">
-        <text variable="title" />
+        <!-- <text variable="title" /> -->
         <text macro="author-short" />
         <text macro="year-date" />
         <group delimiter=" ">

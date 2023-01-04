@@ -19,6 +19,12 @@
     border: 1px dashed red;
     padding: 5px;
   }
+  .Tue {
+    width: 50%;
+  }
+  .Thu {
+    width: 50%;
+  }
   .day {
     display: flex;
     flex-direction: column;
@@ -30,6 +36,7 @@
     min-width: 80px;
     vertical-align: middle;
     padding: 4px;
+    font-weight: bolder;
     text-align: center;
   }
   .content{
