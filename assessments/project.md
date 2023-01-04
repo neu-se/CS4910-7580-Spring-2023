@@ -19,11 +19,12 @@ The project will involve a hands-on application of the techniques and tools that
 
 We will add to this list throughout the first few weeks of the semester, and students are welcomed to propose project ideas that aren't from this list. Course projects that build on or extend students' projects from outside of the course are welcomed.
 
-You will have three primary deliverables for the project: 1) a proposal outlining your project, 2) a final report describing your project experience, and 3) the actual software artifact that you created in your project.
+You will have four primary deliverables for the project: 1) a proposal outlining your project, 2) a mid-semester status update, 3) a final report describing your project experience, and 4) the actual software artifact that you created in your project.
 
 ## The Project Proposal
 The project proposal should explain, at a high level, the project that you have in mind. The proposal should address the following points:
-1. Describe the goals of your project: are you seeking to develop new functionality for an existing application, develop a greenfield application, or evaluate some existing system? 2. What will be the concrete deliverables that you create?
+1. Describe the goals of your project: are you seeking to develop new functionality for an existing application, develop a greenfield application, or evaluate some existing system?
+2. What will be the concrete deliverables that you create?
 3. If there will be an evaluation aspect, what metrics will you capture? 
 4. What technologies will you use?
 5. What are the major risks that you see in the project that you are proposing? Do you have contingency plans in case some key aspect of the project doesn't work out?
@@ -37,8 +38,24 @@ A good-faith, on-time attempt to answer the questions above is necessary to rece
 ### Proposal re-submission
 If your project proposal is submitted on time, but is not sufficiently detailed that I can judge whether your project is feasible or not, I will provide you with detailed feedback, and ask you to re-submit the project proposal. If you then re-submit the proposal, this will not have any negative impact on your grade.
 
+## The Project Status Update
+The project status update should reflect on the progress that you have made thus far and outline the work that remains to be done on your project. 
+The status update should address the following points:
+
+1. What have you accomplished?
+2. What challenges have you encountered?
+3. Are there any difficulties that are currently preventing you from making progress?
+4. What tasks do you still need to complete?
+5. Do you believe that your original proposal is still feasible? If no, what modifications to your original proposal would make it more feasible.
+
+The project status update should be roughly 2-4 paragraphs long.
+
+The project status update is due on March 16th at 11:59pm, submitted via Canvas.
+
+A good-faith, on-time attempt to answer the questions above is necessary to receive a "check" on the project overall (see overall project grading rubric below).
+
 ## The Project Report
-In addition to producing a code artifact (e.g. your project implementation), you will also writeup a final project report that describes your experience implementing and evaluating your project. The maximum length of the project report is ten pages, not including figures and/or references. As they say, "a picture is worth a thousand words" --- we expect that there will be at least some figures in every project report (e.g. architectural diagrams, screenshots, evaluation results, etc.). Please consider ten pages as an absolute upper-bound on length: shorter may be better than longer, and a 3-5 page report that contains everything that we need to know is fine.
+In addition to producing a code artifact (e.g. your project implementation), you will also write up a final project report that describes your experience implementing and evaluating your project. The maximum length of the project report is ten pages, not including figures and/or references. As they say, "a picture is worth a thousand words" --- we expect that there will be at least some figures in every project report (e.g. architectural diagrams, screenshots, evaluation results, etc.). Please consider ten pages as an absolute upper-bound on length: shorter may be better than longer, and a 3-5 page report that contains everything that we need to know is fine.
 
 The final report should contain the following sections (feel free to add additional sections; the sections below are required):
 
@@ -61,15 +78,17 @@ Your project will be graded on the scale of (Unacceptable, Check-, Check, Check+
 
 To receive the grade of **Check**, the project must satisfy all of these criteria:
 * The project proposal is submitted on time. The proposal is roughly one page long and includes a good-faith effort to address each of the 5 points outlined above.
+* The project status update is submitted on time. The status update is roughly 2-4 paragraphs long and includes a good-faith effort to address each of the 5 points outlined above.
 * The project includes a response to any feedback provided on the proposal: for any changes requested by the instructor, either those changes were accepted, or there is a discussion in the report of why those changes did not make sense.
 * The project report is between 3-10 pages long, contains at least the three sections outlined above, and captures your efforts on implementing your project
 * The project report and implementation are submitted on time
 * EITHER:
 	* 1) the project implementation successfully achieves the goals outlined, OR:
-	* 2) the "Project Challenges" section of the report describes in detail the challenges that you faced that prevented you from achieving some goal(s), and the steps that you took to try to overcome those challenges. The record of steps that you took to overcome those challenges is sufficiently detailed to demonstrate that you put a good-faith effort into getting it to to work. 
+	* 2) the "Project Challenges" section of the report describes in detail the challenges that you faced that prevented you from achieving some goal(s), and the steps that you took to try to overcome those challenges. The record of steps that you took to overcome those challenges is sufficiently detailed to demonstrate that you put a good-faith effort into getting it to work. 
 	
 To receive the grade of **Check-**: the project must satisfy all of these criteria:
 * The project proposal is submitted on time. The proposal is roughly one page long and includes a good-faith effort to address each of the 5 points outlined above.
+* The project status update is submitted on time. The status update is roughly 2-4 paragraphs long and includes a good-faith effort to address each of the 5 points outlined above.
 * The project report is between 3-10 pages long, contains at least the three sections outlined above, with a good-faith effort to respond to the prompts.
 * The project report and implementation are submitted on time
 * The project implementation may not achieve all of the goals outlined, the project challenges section may not include a detailed discussion of the challenges encountered and good-faith attempts to overcome those challenges.
