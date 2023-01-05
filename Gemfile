@@ -6,7 +6,7 @@ group :jekyll_plugins do
   gem "jekyll-asciidoc", "~> 2.1.1"
   gem "jekyll-seo-tag", "~> 2.7.1"
   gem "jekyll-last-modified-at"
-  gem "jekyll-canvas-lms", git: "jon-bell/jekyll-canvas-lms", branch: "main"
+  gem "jekyll-canvas-lms", git: "https://github.com/jon-bell/jekyll-canvas-lms", branch: "main"
 end
 
 gem "kramdown-parser-gfm"
