@@ -42,7 +42,7 @@ If your project proposal is submitted on time, but is not sufficiently detailed 
 The project status update should reflect on the progress that you have made thus far and outline the work that remains to be done on your project. 
 The status update should address the following points:
 
-1. What have you accomplished?
+1. What have you accomplished? Include a link to the code that you have written so far.
 2. What challenges have you encountered?
 3. Are there any difficulties that are currently preventing you from making progress?
 4. What tasks do you still need to complete?
@@ -84,7 +84,7 @@ To receive the grade of **Check**, the project must satisfy all of these criteri
 * The project report and implementation are submitted on time
 * EITHER:
 	* 1) the project implementation successfully achieves the goals outlined, OR:
-	* 2) the "Project Challenges" section of the report describes in detail the challenges that you faced that prevented you from achieving some goal(s), and the steps that you took to try to overcome those challenges. The record of steps that you took to overcome those challenges is sufficiently detailed to demonstrate that you put a good-faith effort into getting it to work. 
+	* 2) the "Project Challenges" section of the report describes in detail the challenges that you faced that prevented you from achieving some goal(s), and the steps that you took to try to overcome those challenges. The record of steps that you took to overcome those challenges is sufficiently detailed to demonstrate that you put a good-faith effort into getting it to work. The project status update supports this narrative.
 	
 To receive the grade of **Check-**: the project must satisfy all of these criteria:
 * The project proposal is submitted on time. The proposal is roughly one page long and includes a good-faith effort to address each of the 5 points outlined above.
