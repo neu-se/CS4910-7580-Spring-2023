@@ -83,7 +83,7 @@ weeks:
             optional: [Bohme16CoverageBased,Pacheco07Randoop]
         Thu:
             date: 2023/02/23
-            name: 'Project Proposal Presentations'
+            name: 'Project Proposal Discussions'
             deliverable:
                 name: 'Preliminary Project Proposal'
     '8':
