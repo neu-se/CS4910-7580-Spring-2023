@@ -71,7 +71,7 @@ compress_html:
   profile: false
 
 plugins:
-  # - jekyll-canvas-lms
+  - jekyll-canvas-lms
   - jekyll-seo-tag
   - jekyll-scholar
 

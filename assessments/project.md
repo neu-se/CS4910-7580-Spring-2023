@@ -2,57 +2,23 @@
 layout: assignment
 title: Implementation Project
 parent: Assessments
-nav_order: 2
+nav_order: 5
 description: Description of Course Project
-due_date: "Thursday April 20, 11:59pm ET"
+due_date: "Tuesday April 18 2023, 11:00am ET"
 ---
 
-# Implementation Project
 The project will involve a hands-on application of the techniques and tools that we discuss in class, and can be completed either individually or in a group of at most three. Topics for the project will be discussed in the first six weeks of class, and your specific project topic will be finalized soon after. Both research-oriented projects (which implement and evaluate some new idea) and engineering-oriented projects (which make contributions to tools that developers may already use) are welcomed. All projects must involve the implementation of some software artifact (e.g. building a new system, extending an existing one, or developing scripting to automate the evaluation of some system). 
 
 
 ## Sample project ideas
-* AFL++ describes numerous engineering improvements to AFL that make a significant improvement to AFL. There are a number of fuzzers written in other languages, targeting code in Java (e.g. [JQF](https://github.com/rohanpadhye/JQF) and [Jazzer](https://github.com/CodeIntelligenceTesting/jazzer)) in Python (e.g. [Atheris](https://github.com/google/atheris), plus surely many more). Implement one of the features of AFL++ for one of those fuzzers, and evaluate the performance improvement on the fuzzer
-* Exploring mutation testing with flaky tests
-* Combining fuzzing with test harness generation
-* Build a fuzzing harness for Java web apps
+* Mining GitHub or other open source ecosystems to answer a software engineering research question
+* Conducting an evaluation of existing software engineering tools or frameworks in a new context (compared to existing evaluations)
+* Implementing new features for open source software engineering tools, for example: extensions to mutation testing tools, fuzzers, plugins for continuous integration platforms, etc.
 
 We will add to this list throughout the first few weeks of the semester, and students are welcomed to propose project ideas that aren't from this list. Course projects that build on or extend students' projects from outside of the course are welcomed.
 
-You will have four primary deliverables for the project: 1) a proposal outlining your project, 2) a mid-semester status update, 3) a final report describing your project experience, and 4) the actual software artifact that you created in your project.
+You will have five primary deliverables for the project: 1) [a preliminary proposal outlining your project]({{site.baseurl}}/asessments/project-proposal), 2) [a revised proposal]({{site.baseurl}}{% link assessments/revised-project-proposal.md %}), 3) a [mid-semester status update]]({{site.baseurl}}{% link assessments/project-status-update.md %}), 4) a final report describing your project experience, and 5) the actual software artifact that you created in your project.
 
-## The Project Proposal
-The project proposal should explain, at a high level, the project that you have in mind. The proposal should address the following points:
-1. Describe the goals of your project: are you seeking to develop new functionality for an existing application, develop a greenfield application, or evaluate some existing system?
-2. What will be the concrete deliverables that you create?
-3. If there will be an evaluation aspect, what metrics will you capture? 
-4. What technologies will you use?
-5. What are the major risks that you see in the project that you are proposing? Do you have contingency plans in case some key aspect of the project doesn't work out?
-
-The proposal should be roughly one page long, although if you find it useful to include figures, or additional text, that is OK, too.
-
-The project proposal is due on February 16th at 11:59pm, submitted via Canvas.
-
-A good-faith, on-time attempt to answer the questions above is necessary to receive a "check" on the project overall (see overall project grading rubric below).
-
-### Proposal re-submission
-If your project proposal is submitted on time, but is not sufficiently detailed that I can judge whether your project is feasible or not, I will provide you with detailed feedback, and ask you to re-submit the project proposal. If you then re-submit the proposal, this will not have any negative impact on your grade.
-
-## The Project Status Update
-The project status update should reflect on the progress that you have made thus far and outline the work that remains to be done on your project. 
-The status update should address the following points:
-
-1. What have you accomplished? Include a link to the code that you have written so far.
-2. What challenges have you encountered?
-3. Are there any difficulties that are currently preventing you from making progress?
-4. What tasks do you still need to complete?
-5. Do you believe that your original proposal is still feasible? If no, what modifications to your original proposal would make it more feasible.
-
-The project status update should be roughly 2-4 paragraphs long.
-
-The project status update is due on March 16th at 11:59pm, submitted via Canvas.
-
-A good-faith, on-time attempt to answer the questions above is necessary to receive a "check" on the project overall (see overall project grading rubric below).
 
 ## The Project Report
 In addition to producing a code artifact (e.g. your project implementation), you will also write up a final project report that describes your experience implementing and evaluating your project. The maximum length of the project report is ten pages, not including figures and/or references. As they say, "a picture is worth a thousand words" --- we expect that there will be at least some figures in every project report (e.g. architectural diagrams, screenshots, evaluation results, etc.). Please consider ten pages as an absolute upper-bound on length: shorter may be better than longer, and a 3-5 page report that contains everything that we need to know is fine.
@@ -71,7 +37,7 @@ While it is possible that you successfully implemented your entire project witho
 In this section, you should describe in detail challenges that you encountered, and what you did to try to work around them. If you ran into implementation-level challenges (e.g. difficulties with particular technologies, unescapable segfaults, etc) describe your hypothesis for *why* you might have run into this challenge, and any steps that you have taken to try to test that hypothesis/debug the situation. This section provides an opportunity for a project that has no working implementation at all to still receive a grade of "check" - if you could never get the project to work, but can describe various steps that you took to debug your project, you are still creating an artifact that demonstrates your understanding of advanced software engineering processes.
 
 ## Final Project Submission
-Create a zip file with your entire implementation, and create a PDF with your report. Submit both on Canvas by April 13th at 11:59pm. No late submissions will be accepted. 
+Create a zip file with your entire implementation, and create a PDF with your report. Submit both on Canvas by April 18 at 11:00am. No late submissions will be accepted. 
 
 ## Grading Rubric
 Your project will be graded on the scale of (Unacceptable, Check-, Check, Check+). The criteria for each grade are described below:

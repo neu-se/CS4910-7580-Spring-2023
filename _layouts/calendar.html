@@ -57,14 +57,14 @@ layout: default
             </ol>
           </div>
           {% endif %}
-          {% if m.optional %}
+          <!-- {% if m.optional %}
           Optional Readings:
           <ol>
             {% for r in m.optional %}
             <li class="reading">{% cite r %}</li>
             {% endfor %}
           </ol>
-          {% endif %}
+          {% endif %} -->
         </div>
         <div class="note">{{ week[day].note | markdownify }}</div>
       </div>
@@ -86,10 +86,10 @@ layout: default
   </tr>
   {% endfor %}
 </table>
-
+<!-- 
 <h3>Bibliography of optional readings:</h3>
 
-{% bibliography --cited --cited_in_order %}
+{% bibliography --cited --cited_in_order %} -->
 
 {% assign start_time = page.timeline | first %}
 {% capture offset %}{% include minutes.liquid time=start_time %}{% endcapture %}

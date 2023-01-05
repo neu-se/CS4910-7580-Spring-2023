@@ -28,7 +28,8 @@ weeks:
             date: 2023/01/19
             name: "Discussion: Modularity and Design"
             required:
-                - "TBD"
+                - "[Aspect-Oriented Programming](https://link.springer.com/chapter/10.1007/BFb0053381). Kiczales et al. ECOOP 1997"
+                - "[An empirical study on program comprehension with reactive programming](https://dl.acm.org/doi/abs/10.1145/2635868.2635895). Salvaneschi et al. FSE 2014"
     '3':
         topic: Mining Software Repositories
         Tue:
@@ -56,6 +57,10 @@ weeks:
         Tue:
             date: 2023/02/07
             name: 'Overview: Tests and Oracles'
+            deliverable:
+                name: 'Reflection Paper Proposal'
+                page: '/assessments/paper-proposal/'
+
         Thu:
             date: 2023/02/09
             name: 'Discussion: Test Oracles'
@@ -86,6 +91,7 @@ weeks:
             name: 'Project Proposal Discussions'
             deliverable:
                 name: 'Preliminary Project Proposal'
+                page: '/assessments/project-proposal'
     '8':
         topic: 'CI and Test Suite Maintenance'
         Tue:
@@ -96,6 +102,7 @@ weeks:
             name: 'Discussion: CI, more process'
             deliverable:
                 name: 'Final Project Proposal'
+                page: '/assessments/revised-project-proposal'
             # readings: [Hilton17Tradeoffs,Memon17Taming]
             required:
                 - "[Trade-Offs in Continuous Integration: Assurance, Security, and Flexibility](https://doi.org/10.1145/3106237.3106270). Hilton et al. FSE 2017"
@@ -124,12 +131,15 @@ weeks:
             # readings: [Kaldor17Canopy]
             required:
                 - "[Canopy: An End-to-End Performance Tracing And Analysis System](https://doi.org/10.1145/3132747.3132749). Kaldor et al. OSDI 2017"
-                - TBD
+                - "[An Evolutionary Study of Configuration Design and Implementation in Cloud Systems](https://dl.acm.org/doi/10.1109/ICSE43902.2021.00029). Zhang et al. ICSE 2021"
     '12':
         topic: Expertise and Knowledge Sharing
         Tue:
             name: 'Overview: Collaboration in SE'
             date: 2023/03/28
+            deliverable:
+                name: Project Status Update
+                page: /assessments/project-status-update/
         Thu:
             date: 2023/03/30
             name: "Discussion: Being Great and Helping Others"
@@ -168,12 +178,16 @@ weeks:
             name: "Discussion: SE and Robotics"
             # readings: [Hermans2015Detecting]
             required:
-                - "TBD"
+                - "[Crashing Simulated Planes is Cheap: Can Simulation Detect Robotics Bugs Early?](https://ieeexplore.ieee.org/document/8367060). Timperley et al. ICST 2018"
+                - "[Lightweight detection of physical unit inconsistencies without program annotations](https://dl.acm.org/doi/abs/10.1145/3092703.3092722). Ore, Detweiler and Elbaum. ISSTA 2017"
     '15':
         topic: Project Presentations
         Tue:
             date: 2023/04/18
             name: "Students present their projects"
+            deliverable:
+                name: Project Report
+                page: /assessments/project/
         Thu:
             date: 2023/04/20
             name: "Students present their projects"
