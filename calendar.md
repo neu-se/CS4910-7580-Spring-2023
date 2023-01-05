@@ -91,11 +91,11 @@ weeks:
         Tue:
             name: 'Overview: CI and cloud resources'
             date: 2023/02/28
-            deliverable:
-                name: 'Final Project Proposal'
         Thu:
             date: 2023/03/02
             name: 'Discussion: CI, more process'
+            deliverable:
+                name: 'Final Project Proposal'
             # readings: [Hilton17Tradeoffs,Memon17Taming]
             required:
                 - "[Trade-Offs in Continuous Integration: Assurance, Security, and Flexibility](https://doi.org/10.1145/3106237.3106270). Hilton et al. FSE 2017"
