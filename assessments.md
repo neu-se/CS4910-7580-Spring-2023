@@ -18,8 +18,8 @@ As an alternative, you may also (or instead) e-mail me a brief (3-5 sentence) re
 
 I will provide you with weekly feedback on your participation in class, at the level of "check", "check -" and "check +." If you receive a "check -", you may replace that week's grade with a check by coming to my office hours (or scheduling a time outside of office hours) to have a brief discussion about your thoughts on that week's papers. Your final participation grade will be calculated as follows:
 
-* Receive a *Check* on participation if at least 10/12 Check's or Check+'s throughout the semester.
-* Receive a *Check -* on participation if at least 10/12 Check-'s, Check's or Check+'s throughout the semester.
+* Receive a *Check* on participation if at least 12/14 Check's or Check+'s throughout the semester.
+* Receive a *Check -* on participation if at least 12/14 Check-'s, Check's or Check+'s throughout the semester.
 
 Note that this policy allows you to entirely miss up to two weeks of participation, with no penalty on your final grade. 
 
