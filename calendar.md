@@ -1,6 +1,7 @@
 ---
 layout: calendar
 title: Calendar
+nav_order: 2
 instructor: Prof Bell
 location: Richards Hall 325
 dates: Tues 11:45am-1:25pm, Thurs 2:50pm-4:30pm
@@ -10,7 +11,8 @@ weeks:
         topic: Software Process
         Tue:
             date: 2023/01/10
-            name: SW Process and Course Overview
+            name: SW Process and Course Overview. 
+            file: 1-overview
         Thu:
             date: 2023/01/12
             name: Process Discussion

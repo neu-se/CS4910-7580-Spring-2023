@@ -2,6 +2,7 @@
 layout: page
 title: Assessments
 has_children: true
+nav_order: 1
 has_toc: false
 description: Description of Course Assessments
 ---

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Policies
+nav_order: 4
 permalink: /policies/
 ---
 ## Grading

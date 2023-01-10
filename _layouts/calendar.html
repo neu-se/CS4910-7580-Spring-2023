@@ -33,6 +33,9 @@ layout: default
           <a href="{{site.baseurl}}{{ m.page }}">{{ m.name }}</a>
           {% else %}
           <i>{{ m.name }}</i>
+          {% if m.file %}
+          <a href="{{site.baseurl}}/lecture-notes/1-overview.key">Keynote</a>, <a href="{{site.baseurl}}/lecture-notes/1-overview.pdf">PDF</a>
+          {% endif %}
           {% endif %}
           {% if m.required %}
           <div class="readings">Required Readings:
