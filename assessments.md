@@ -14,7 +14,7 @@ Please note the [course grading policy]({{ site.baseurl }}{% link policies.md%}#
 This class is effectively a research seminar, and it is the most fun and rewarding when everyone comes to each class meeting prepared to discuss the assigned paper. 
 I ask that you demonstrate your preparation by being ready to engage in discussion. You need not have complete mastery of the paper that we are discussing --- but having a comment to offer or question to ask is always appreciated.
 If you do not feel comfortable participating in class, please reach out to me --- I would like to create an environment that is welcoming for discussion, and would not like to inadvertently penalize a student who struggled to find a moment to speak up in class.
-As an alternative, you may also (or instead) e-mail me a brief (3-5 sentence) reaction to the papers that we will be discussing in class.
+As an alternative, you may also (or instead) post on the class Discord a brief (3-5 sentence) reaction to the papers that we will be discussing in class, and engage in discussion through text.
 
 I will provide you with weekly feedback on your participation in class, at the level of "check", "check -" and "check +." If you receive a "check -", you may replace that week's grade with a check by coming to my office hours (or scheduling a time outside of office hours) to have a brief discussion about your thoughts on that week's papers. Your final participation grade will be calculated as follows:
 
@@ -22,6 +22,9 @@ I will provide you with weekly feedback on your participation in class, at the l
 * Receive a *Check -* on participation if at least 12/14 Check-'s, Check's or Check+'s throughout the semester.
 
 Note that this policy allows you to entirely miss up to two weeks of participation, with no penalty on your final grade. 
+
+### Remote Participation
+If you are registered for an on-the-ground section are not able to attend in person (for any reason), please contact your instructor at least 12 hours in advance of the scheduled class (no need to share a specific reason or photo of a COVID test). Please, note that we are not well-equipped to offer a symmetrical experience for remote attendance and in-person attendance, and do not consider joining remotely as a perfect substitute, but rather an improvement over missing class entirely. No student should expect to have this accomodation granted more than three times during the semester.
 
 ## Reflection Paper
 The goal of the reflection paper is for you to select a topic of particular personal interest, identify four research articles (that are not required readings for this course), read them, and organize your reaction to the topic in a *reflection paper*. The reflection paper provides you to an opportunity to apply critical reasoning skills in the context of the research papers that we discuss in class, and to dig deeper into a topic of your own particular interest. The expected length of the reflection paper is roughly 2,500 words. The paper will be accompanied by a presentation.

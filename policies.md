@@ -17,7 +17,7 @@ For each of these three assessments, you will receive a grade of check (satisfac
 
 Final grades in-between these marks (e.g. A-/B+/B- etc.) may be assigned at the instructor's discretion.
 
-I will provide a detailed rubric for each of these three components of your grade at the start of the semester, and will provide you with regular opportunities for feedback. As detailed below, participation grades may be improved throughout the semester, and the reflection paper may be revised and re-submited. I will provide you with early feedback on your final project, but since the project is due at the end of the term, it will not be possible to resubmit it. The project will be graded on both effort and results: projects that ultimately don't work out as intended, but are accompanied by a detailed report explaining what didn't work and your hypotheses for why that didn't work are welcome.
+I will provide a detailed rubric for each of these three components of your grade at the start of the semester, and will provide you with regular opportunities for feedback. As detailed in the [assessments page]({{site.baseurl}}{% link assessments.md %}/#participation), participation grades may be improved throughout the semester, and the reflection paper may be revised and re-submited. I will provide you with early feedback on your final project, but since the project is due at the end of the term, it will not be possible to resubmit it. The project will be graded on both effort and results: projects that ultimately don't work out as intended, but are accompanied by a detailed report explaining what didn't work and your hypotheses for why that didn't work are welcome.
 
 The overall philosophy behind this grading scheme is to create the most opportunities for students to engage with the course material, while minimizing stress and anxiety from high-stakes deliverables.
 
@@ -38,6 +38,7 @@ To create and preserve a classroom atmosphere that optimizes teaching and learni
 Please don't be late. You are an essential part of the class. Your participation is an essential part of the class. If you are late, please be courteous to others when entering.
 
 Attendance in the class meetings is expected. Sometimes you cannot avoid missing a class. If you need to be away from class, it is your responsibility to catch up on the materials discussed in the class.
+Please see the [course policy on remote attendance]({{site.baseurl}}{% link assessments.md %}/#remote-participation)
 
 ## Accommodations for Disabilities
 Students who have disabilities who wish to receive academic services and/or accommodations should visit the [Disability Resource Center](http://www.northeastern.edu/drc) at 20 Dodge Hall or call (617) 373-2675. If you have already done so, please provide your letter from the DRC to the Instructor early in the semester so that they can arrange those accommodations.
