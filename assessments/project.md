@@ -14,6 +14,8 @@ The project will involve a hands-on application of the techniques and tools that
 * Mining GitHub or other open source ecosystems to answer a software engineering research question
 * Conducting an evaluation of existing software engineering tools or frameworks in a new context (compared to existing evaluations)
 * Implementing new features for open source software engineering tools, for example: extensions to mutation testing tools, fuzzers, plugins for continuous integration platforms, etc.
+* Creating continuous integration workflows for automated performance testing of the [covey.town](https://github.com/neu-se/covey.town) platform
+* Applying continuous integration and automated testing to an existing research project
 
 We will add to this list throughout the first few weeks of the semester, and students are welcomed to propose project ideas that aren't from this list. Course projects that build on or extend students' projects from outside of the course are welcomed.
 

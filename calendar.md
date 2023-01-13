@@ -16,6 +16,7 @@ weeks:
         Thu:
             date: 2023/01/12
             name: Process Discussion
+            page: /lecture-notes/2-sdi
             required:
                 - "[Software Aspects of Strategic Defense Systems](https://doi.org/10.1145/214956.214961). David Parnas. CACM 1985"
     '2':
