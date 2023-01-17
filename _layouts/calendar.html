@@ -29,13 +29,14 @@ layout: default
         {% assign className = site.data.config.types[m.type].className %}
         {% endif %}
         <div class="content {{className}}">
-          {% if m.page %}
-          <a href="{{site.baseurl}}{{ m.page }}">{{ m.name }}</a>
-          {% else %}
           <i>{{ m.name }}</i>
           {% if m.file %}
-          <a href="{{site.baseurl}}/lecture-notes/1-overview.key">Keynote</a>, <a href="{{site.baseurl}}/lecture-notes/1-overview.pdf">PDF</a>
+          <a href="{{site.baseurl}}/lecture-notes/{{ m.file }}.key">Keynote</a>, <a href="{{site.baseurl}}/lecture-notes/{{ m.file }}.pdf">PDF</a>
+          {% if m.page %}, 
           {% endif %}
+          {% endif %}
+          {% if m.page %}
+          <a href="{{site.baseurl}}{{ m.page }}">Notes</a>
           {% endif %}
           {% if m.required %}
           <div class="readings">Required Readings:

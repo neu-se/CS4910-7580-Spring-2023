@@ -25,6 +25,8 @@ weeks:
             date: 2023/01/17
             name: "Overview: Modularity, Design and Patterns"
             # readings: [GabrielPatterns]
+            page: /lecture-notes/3-design
+            file: 3-design
             required:
                 - "[Patterns of Software: Tales from the Software Community](https://www.dreamsongs.com/Files/PatternsOfSoftware.pdf). Richard Gabriel, 1996. Read 'Reuse Versus Compression' (p3-7) and 'The Quality Without a Name' (p33-43)"
         Thu:
