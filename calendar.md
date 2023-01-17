@@ -34,27 +34,27 @@ weeks:
                 - "[Aspect-Oriented Programming](https://link.springer.com/chapter/10.1007/BFb0053381). Kiczales et al. ECOOP 1997"
                 - "[An empirical study on program comprehension with reactive programming](https://dl.acm.org/doi/abs/10.1145/2635868.2635895). Salvaneschi et al. FSE 2014"
     '3':
-        topic: Mining Software Repositories
-        Tue:
-            date: 2023/01/24
-            name: 'Overview: MSR, metrics'
-        Thu:
-            date: 2023/01/26
-            name: 'Discussion: Mining Software Repositories'
-            required:
-                - "[The Promises and Perils of Mining GitHub](https://doi.org/10.1145/2597073.2597074). Kalliamvakou et al. MSR 2014"
-                - "[A Large-Scale Comparison of Python Code in Jupyter Notebooks and Scripts](https://doi.org/10.1145/3524842.3528447). Grotov et al. MSR 2022"
-    '4':
         topic: 'Open Source'
         Tue:
-            date: 2023/01/31
+            date: 2023/01/24
             name: 'Overview: Open Source History and Models'
         Thu:
-            date: 2023/02/02
+            date: 2023/01/26
             name: 'Discussion: Open Source'
             required:
                 - "[How Has Forking Changed in the Last 20 Years? A Study of Hard Forks on GitHub](https://doi.org/10.1145/3377812.3390911). Zhou, Vasilescu and Kästner. ICSE 2020"
                 - "[How to Not Get Rich: An Empirical Study of Donations in Open Source](https://doi.org/10.1145/3377811.3380410). Overney et al. ICSE 2020"
+    '4':
+        topic: Mining Software Repositories
+        Tue:
+            date: 2023/01/31
+            name: 'Overview: MSR, metrics'
+        Thu:
+            date: 2023/02/02
+            name: 'Discussion: Mining Software Repositories'
+            required:
+                - "[The Promises and Perils of Mining GitHub](https://doi.org/10.1145/2597073.2597074). Kalliamvakou et al. MSR 2014"
+                - "[A Large-Scale Comparison of Python Code in Jupyter Notebooks and Scripts](https://doi.org/10.1145/3524842.3528447). Grotov et al. MSR 2022"
     '5':
         topic: 'Testing: Overview and Oracles'
         Tue:
