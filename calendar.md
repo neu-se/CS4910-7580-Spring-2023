@@ -32,6 +32,7 @@ weeks:
         Thu:
             date: 2023/01/19
             name: "Discussion: Modularity and Design"
+            page: /lecture-notes/4-aop-rp
             required:
                 - "[Aspect-Oriented Programming](https://link.springer.com/chapter/10.1007/BFb0053381). Kiczales et al. ECOOP 1997"
                 - "[An empirical study on program comprehension with reactive programming](https://dl.acm.org/doi/abs/10.1145/2635868.2635895). Salvaneschi et al. FSE 2014"
