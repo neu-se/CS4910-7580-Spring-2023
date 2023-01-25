@@ -41,3 +41,5 @@ Submit a text document with the following specifications:
 4. Identify the five additional articles that you will include in your reflection paper. Provide a citation (title, authors, and venue) and a link to the article
 
 A good-faith, on-time proposal that meets the specifications above is necessary to receive a "check" on the paper overall.
+
+**This is an individual assignment**. The goal of this assignment is to provide your *personal* reflection to the topic of your choice. Papers that are substantially similar to each other (or to third-party content) will receive a score of 0, with no opportunity for a revision. If you have any questions or concerns of what constitutes plagiarism, please reach out to the instructor immediately. 

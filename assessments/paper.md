@@ -44,6 +44,8 @@ Once you have selected the papers that you will respond to, consider one (or mor
 
 You should consider these prompts as jumping-off points: feel free to respond to one or more of these questions in your paper, or alternatively, something completely different. The most important part is that your paper should convey *your own reactions* to the six papers that you have selected --- demonstrating that you read the papers and thought about them. 
 
+**This is an individual assignment**. The goal of this assignment is to provide your *personal* reflection to the topic of your choice. Papers that are substantially similar to each other (or to third-party content) will receive a score of 0, with no opportunity for a revision. If you have any questions or concerns of what constitutes plagiarism, please reach out to the instructor immediately. 
+
 ## Formatting
 Feel free to use whatever word processing environment you prefer. We strongly encourage that you use some editor that will help you manage a bibliography --- like LaTeX + BibTex, or Word + Endnote.  Please clearly identify the one paper from the required reading list for the course plus the five additional papers that you intend to discuss --- one way to do that might be to include them in your bibliography, and cite them in the first paragraph of your paper. 
 
