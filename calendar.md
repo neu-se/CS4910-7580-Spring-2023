@@ -45,6 +45,7 @@ weeks:
         Thu:
             date: 2023/01/26
             name: 'Discussion: Open Source'
+            page: /lecture-notes/6-oss
             required:
                 - "[How Has Forking Changed in the Last 20 Years? A Study of Hard Forks on GitHub](https://dl.acm.org/doi/10.1145/3377811.3380412). Zhou, Vasilescu and Kästner. ICSE 2020"
                 - "[How to Not Get Rich: An Empirical Study of Donations in Open Source](https://doi.org/10.1145/3377811.3380410). Overney et al. ICSE 2020"
