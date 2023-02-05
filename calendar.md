@@ -54,9 +54,11 @@ weeks:
         Tue:
             date: 2023/01/31
             name: 'Overview: MSR, metrics'
+            file: 7-msr
         Thu:
             date: 2023/02/02
             name: 'Discussion: Mining Software Repositories'
+            page: /lecture-notes/8-msr
             required:
                 - "[The Promises and Perils of Mining GitHub](https://doi.org/10.1145/2597073.2597074). Kalliamvakou et al. MSR 2014"
                 - "[A Large-Scale Comparison of Python Code in Jupyter Notebooks and Scripts](https://doi.org/10.1145/3524842.3528447). Grotov et al. MSR 2022"
