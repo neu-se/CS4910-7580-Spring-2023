@@ -4,7 +4,7 @@ parent: Assessments
 title: Reflection Paper Proposal
 description: Description of Course Paper Proposal
 nav_order: 1
-due_date: "Thursday February 7, 11:00am ET"
+due_date: "Thursday February 7, 11:00am EST"
 ---
 
 The structure of this class is designed to provide a broad survey of many topics in software engineering practice and research:
