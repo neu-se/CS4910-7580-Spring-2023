@@ -4,7 +4,7 @@ title: Revised Project Proposal
 parent: Assessments
 nav_order: 3
 description: Description of Course Project Proposal
-due_date: "Thursday Mar 2 2023, 11:00am ET"
+due_date: "Thursday Mar 2 2023, 11:00am EST"
 ---
 
 The project will involve a hands-on application of the techniques and tools that we discuss in class, and can be completed either individually or in a group of at most three. You can read more about the overall goals and structure for the project on the [project writeup]({{site.baseurl}}/assessments/project).

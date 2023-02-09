@@ -4,7 +4,7 @@ title: Project Status Update
 parent: Assessments
 nav_order: 4
 description: Description of Course Project Proposal
-due_date: "Tuesday Mar 28 2023, 11:00am ET"
+due_date: "Tuesday Mar 28 2023, 11:00am EST"
 ---
 
 The project status update should reflect on the progress that you have made thus far and outline the work that remains to be done on your project. 

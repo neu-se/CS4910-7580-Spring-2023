@@ -4,7 +4,7 @@ title: Implementation Project
 parent: Assessments
 nav_order: 5
 description: Description of Course Project
-due_date: "Tuesday April 18 2023, 11:00am ET"
+due_date: "Tuesday April 18 2023, 11:00am EST"
 ---
 
 The project will involve a hands-on application of the techniques and tools that we discuss in class, and can be completed either individually or in a group of at most three. Topics for the project will be discussed in the first six weeks of class, and your specific project topic will be finalized soon after. Both research-oriented projects (which implement and evaluate some new idea) and engineering-oriented projects (which make contributions to tools that developers may already use) are welcomed. All projects must involve the implementation of some software artifact (e.g. building a new system, extending an existing one, or developing scripting to automate the evaluation of some system). 

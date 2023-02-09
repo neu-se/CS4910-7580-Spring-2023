@@ -67,6 +67,7 @@ weeks:
         Tue:
             date: 2023/02/07
             name: 'Overview: Tests and Oracles'
+            file: 9-tests-oracles
             deliverable:
                 name: 'Reflection Paper Proposal'
                 page: '/assessments/paper-proposal/'
@@ -85,6 +86,7 @@ weeks:
             # readings: [Miller90Empirical]
             required:
                 - "[An Empirical Study of the Reliability of UNIX Utilities](https://doi.org/10.1145/96267.96279).  Miller, Fredriksen and So. CACM 1990"
+                - "[How SQLite is Tested](https://www.sqlite.org/testing.html). If you are interested in how SQLite is made, optionally check out: SQLite [amalgamation](https://www.sqlite.org/amalgamation.html), [license](https://github.com/sqlite/sqlite/blob/master/LICENSE.md)"
         Thu:
             date: 2023/02/16
             name: Project Proposal Brainstorming
