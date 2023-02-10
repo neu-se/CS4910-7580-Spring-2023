@@ -75,6 +75,7 @@ weeks:
         Thu:
             date: 2023/02/09
             name: 'Discussion: Test Oracles'
+            page: '/lecture-notes/10-mutation-daikon'
             required:
                 - "[Are Mutants a Valid Substitute for Real Faults in Software Testing?](https://doi.org/10.1145/2635868.2635929). Just et al. FSE 2014"
                 - "[Dynamically Discovering Likely Program Invariants to Support Program Evolution](https://doi.org/10.1145/302405.302467). Ernst, Griswold and Notkin. ICSE 1999"
