@@ -18,8 +18,9 @@ The project proposal should explain, at a high level, the project that you have 
 3. If there will be an evaluation aspect, what metrics will you capture? 
 4. What technologies will you use?
 5. What are the major risks that you see in the project that you are proposing? Do you have contingency plans in case some key aspect of the project doesn't work out?
+6. [If a team project]: What are the high level roles and responsibilities of each team member? It is often helpful to have some notion of task ownership, rater than a "we are all responsible for everything"
 
-The proposal should be roughly one page long, although if you find it useful to include figures, or additional text, that is OK, too.
+The proposal should be roughly one to two pages long, although if you find it useful to include figures, or additional text, that is OK, too.
 
 The preliminary project proposal is due on February 23rd at 11:59pm, submitted via Canvas. If you are working in a group, please be sure to tag each of your team members on Canvas.
 
