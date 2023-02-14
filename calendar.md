@@ -84,6 +84,7 @@ weeks:
         Tue:
             date: 2023/02/14
             name: 'Overview: Input Generation Techniques'
+            file: 11-tests-inputs
             # readings: [Miller90Empirical]
             required:
                 - "[An Empirical Study of the Reliability of UNIX Utilities](https://doi.org/10.1145/96267.96279).  Miller, Fredriksen and So. CACM 1990"
