@@ -22,6 +22,6 @@ The project proposal should explain, at a high level, the project that you have 
 
 The proposal should be roughly one to two pages long, although if you find it useful to include figures, or additional text, that is OK, too.
 
-The preliminary project proposal is due on February 23rd at 11:59pm, submitted via Canvas. If you are working in a group, please be sure to tag each of your team members on Canvas.
+The preliminary project proposal is due on February 23rd at 11:00am, submitted via Canvas. If you are working in a group, please be sure to tag each of your team members on Canvas.
 
 A good-faith, on-time attempt to answer the questions above is necessary to receive a "check" on the project overall (the grading for the preliminary proposal is binary: either you have done it or you haven't).
