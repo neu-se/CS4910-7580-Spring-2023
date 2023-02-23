@@ -18,6 +18,7 @@ The project proposal should explain, at a high level, the project that you have 
 4. What technologies will you use?
 5. What are the major risks that you see in the project that you are proposing? Do you have contingency plans in case some key aspect of the project doesn't work out?
 6. (If a team project): What are the high level roles and responsibilities of each team member? It is often helpful to have some notion of task ownership, rater than a "we are all responsible for everything"
+7. **New compared to preliminary proposal:** What are the high-level tasks that you will need to complete in order to accomplish this project? By when do you plan to accomplish each? Note that you will need to provide a status update on your project on Mar 28 - it may be wise to ensure that any particularly high-risk tasks are scheduled to be completed *before* the status update, such that we can use that checkpoint to discuss alternatives as needed.
 
 The proposal should be roughly one to two pages long, although if you find it useful to include figures, or additional text, that is OK, too.
 
