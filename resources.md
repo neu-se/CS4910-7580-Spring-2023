@@ -14,6 +14,7 @@ There are many articles, blogs, books and podcasts that are very interesting for
 ### Contributing to open source projects
 * ["How to create and review a GitHub pull request"](https://homes.cs.washington.edu/~mernst/advice/github-pull-request.html) by Mike Ernstt 
 * How to write a good bug report:  [Oracle](https://web.archive.org/web/20170512073532/https://www.oracle.com/technetwork/articles/javase/bugreport-howto-135155.html) ,  [Mozilla](https://web.archive.org/web/20210613191914/https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines) ,  [Ximian](https://homes.cs.washington.edu/~mernst/advice/ximian-bug-guidelines.html) ,  [Tatham](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html) ,  [Raymond](http://www.catb.org/~esr/faqs/smart-questions.html) ,  [Software Testing Help](https://www.softwaretestinghelp.com/how-to-write-good-bug-report/) (all via [Mike Ernst's advice page](https://homes.cs.washington.edu/~mernst/advice/))
+
 ### General SE Knowledge
 * ["Software Engineering at Google"](https://learning.oreilly.com/library/view/software-engineering-at/9781492082781/) provides an excellent primer on the practices and processes of software engineering at Google
 
@@ -56,3 +57,7 @@ The definitive list of "code smells" that should be avoiding in programming, mat
 ### Program Understanding
 * Book: ["The Programmer's Brain" by Felienne Hermans](https://www.manning.com/books/the-programmers-brain)<br />
   A survey of research on programming and cognition, covering topics such as how to read code more effectively and how to write code that is easier to read and share.
+
+### Evaluations
+* [The ACM SIGPLAN's "Empirical Evaluation Guidelines"](https://www.sigplan.org/Resources/EmpiricalEvaluation/)
+* ["A Practical Guide for Using Statistical Tests to Assess Randomized Algorithms in Software Engineering" by Andrea Arcuri and Lionel Briand](https://dl.acm.org/doi/10.1145/1985793.1985795)
