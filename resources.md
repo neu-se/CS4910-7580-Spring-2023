@@ -8,6 +8,12 @@ nav_order: 3
 
 There are many articles, blogs, books and podcasts that are very interesting for more reading on the topics discussed in class. We'll update this list as the semester goes, and if you have suggestions of materials to share, please let us know and we'll add it to the list.
 
+### Research mechanics
+* ["How to Read an engineering research paper"](https://cseweb.ucsd.edu/~wgg/CSE210/howtoread.html) by William Griswold
+
+### Contributing to open source projects
+* ["How to create and review a GitHub pull request"](https://homes.cs.washington.edu/~mernst/advice/github-pull-request.html) by Mike Ernstt 
+* How to write a good bug report:  [Oracle](https://web.archive.org/web/20170512073532/https://www.oracle.com/technetwork/articles/javase/bugreport-howto-135155.html) ,  [Mozilla](https://web.archive.org/web/20210613191914/https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines) ,  [Ximian](https://homes.cs.washington.edu/~mernst/advice/ximian-bug-guidelines.html) ,  [Tatham](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html) ,  [Raymond](http://www.catb.org/~esr/faqs/smart-questions.html) ,  [Software Testing Help](https://www.softwaretestinghelp.com/how-to-write-good-bug-report/) (all via [Mike Ernst's advice page](https://homes.cs.washington.edu/~mernst/advice/))
 ### General SE Knowledge
 * ["Software Engineering at Google"](https://learning.oreilly.com/library/view/software-engineering-at/9781492082781/) provides an excellent primer on the practices and processes of software engineering at Google
 
