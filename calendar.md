@@ -97,6 +97,7 @@ weeks:
         Tue:
             date: 2023/02/21
             name: 'Discussion: Fuzzing'
+            page: '/lecture-notes/12-glfuzz'
             required:
                 - "[Automated Testing of Graphics Shader Compilers](https://doi.org/10.1145/3133917). Donaldson et al. OOPSLA 2017"
             optional: [Bohme16CoverageBased,Pacheco07Randoop]
