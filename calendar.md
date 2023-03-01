@@ -112,6 +112,7 @@ weeks:
         Tue:
             name: 'Overview: CI and cloud resources'
             date: 2023/02/28
+			file: 13-ci
         Thu:
             date: 2023/03/02
             name: 'Discussion: CI, more process'
