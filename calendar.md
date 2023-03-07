@@ -119,6 +119,7 @@ weeks:
             deliverable:
                 name: 'Final Project Proposal'
                 page: '/assessments/revised-project-proposal'
+            page: '/lecture-notes/14-ci'
             # readings: [Hilton17Tradeoffs,Memon17Taming]
             required:
                 - "[Trade-Offs in Continuous Integration: Assurance, Security, and Flexibility](https://doi.org/10.1145/3106237.3106270). Hilton et al. FSE 2017"
