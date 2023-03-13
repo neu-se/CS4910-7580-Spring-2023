@@ -4,7 +4,7 @@ parent: Assessments
 title: Reflection Paper
 description: Description of Course Paper
 nav_order: 4
-due_date: "Tuesday Mar 14, 11:00am ET"
+due_date: "Tuesday Mar 14, 11:00am EDT"
 ---
 
 The structure of this class is designed to provide a broad survey of many topics in software engineering practice and research:
