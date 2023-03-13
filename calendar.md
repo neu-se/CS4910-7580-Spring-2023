@@ -134,9 +134,11 @@ weeks:
             deliverable:
                 name: 'Reflection Paper'
                 page: '/assessments/paper/'
+            note: '[Paper presentation order](https://northeastern.instructure.com/courses/136828/pages/paper-presentation-order)'
         Thu:
             date: 2023/03/16
             name: Students present their reflection papers
+            note: '[Paper presentation order](https://northeastern.instructure.com/courses/136828/pages/paper-presentation-order)'
     '11':
         topic: Devops
         Tue:
