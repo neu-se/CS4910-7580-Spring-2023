@@ -144,6 +144,9 @@ weeks:
         Tue:
             date: 2023/03/21
             name: 'Overview: Deployment and Operations'
+            required:
+                - "[The $440 Million Software Error at Knight Capital](https://www.henricodolfing.com/2019/06/project-failure-case-study-knight-capital.html)"
+                - "[Do The Simple Thing First: The Engineering Behind Instagram](https://www.fastcompany.com/3047642/do-the-simple-thing-first-the-engineering-behind-instagram)"
         Thu:
             date: 2023/03/23
             name: 'Discussion: DevOps'
