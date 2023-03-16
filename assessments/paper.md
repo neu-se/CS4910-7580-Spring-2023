@@ -76,7 +76,9 @@ Submit your paper on Canvas. The paper is due on March 14 at 11:00am. No late su
 ## Revision
 Students who make a good faith effort on the paper (e.g. submit a document on time that is conformant to the general guidelines explained above), and receive a grade below "Check" will receive detailed feedback on their paper, and be allowed to resubmit the paper (within 2 weeks), under the understanding that the *highest* grade of the submissions will be used. Students who receive a grade of "Check" may *not* resubmit their work to attempt to achieve a "Check+" (again, note that in this situation, this would have no impact on your course grade).
 
-## Student-selected articles
+## List of all articles selected by students
+We have aggregated all of the articlds selected by students for their reflection papers into lists organized by topic (topics with more articles listed reflect topics that more students selected for their reflection papers)
+
 ### Modularity and design
 * ["Comparative analysis of functional and object-oriented programming", Alic et al.](https://ieeexplore.ieee.org/document/7522224)
 * ["A comparative study of programming languages in rosetta code", Nanz and  Furia](https://ieeexplore.ieee.org/document/7194625)
