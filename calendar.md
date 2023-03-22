@@ -144,6 +144,7 @@ weeks:
         Tue:
             date: 2023/03/21
             name: 'Overview: Deployment and Operations'
+            file: 15-cd
             required:
                 - "[The $440 Million Software Error at Knight Capital](https://www.henricodolfing.com/2019/06/project-failure-case-study-knight-capital.html)"
                 - "[Do The Simple Thing First: The Engineering Behind Instagram](https://www.fastcompany.com/3047642/do-the-simple-thing-first-the-engineering-behind-instagram)"
@@ -171,37 +172,36 @@ weeks:
             # readings: [Li15WhatMakes,Arab22Exploratory]
 
     '13':
-        topic: Security
+        topic: More Human Factors
         Tue:
             date: 2023/04/04
+            name: "Discussion: SE and Data Science"
+            # readings: [Chattopadhyay20Notebooks,Wang21Assessing]
+            required:
+                - "[What’s Wrong with Computational Notebooks? Pain Points, Needs, and Design Opportunities](https://doi.org/10.1145/3313831.3376729). Chattopadhyay et al. CHI 2020"
+                - "[Managing Messes in Computational Notebooks](https://dl.acm.org/doi/10.1145/3290605.3300500). Head et al. CHI 2019"
+
+        Thu:
+            date: 2023/04/06
+            name: "Discussion: Barriers to Diversity in SE"
+            required:
+                - "[Open source barriers to entry, revisited: A sociotechnical perspective](https://dl.acm.org/doi/10.1145/3180155.3180241). Mendez et al. ICSE 2018"
+                - "[\"STILL AROUND\": Experiences and Survival Strategies of Veteran Women Software Developers](https://empirical-software.engineering/assets/pdf/icse23-still-around.pdf). Breukelen et al. ICSE 2023"
+    '14':
+        topic: Security
+        Tue:
+            date: 2023/04/11
             name: 'Overview: Security and SE, Malicious Components'
             # readings: [Sejfia22Practical]
             required:
                 - "[Practical Automated Detection of Malicious Npm Packages](https://doi.org/10.1145/3510003.3510104). Sejfia and Schäfer. ICSE 2022"
         Thu:
-            date: 2023/04/06
+            date: 2023/04/13
             name: "Discussion: Supply Chain Security"
             # readings: [Zahan22WeakLinks,Rahman22WhySecret]
             required:
                 - "[What Are Weak Links in the Npm Supply Chain?](https://doi.org/10.1145/3510457.3513044). Zahan et al. ICSE 2022"
                 - "[Why secret detection tools are not enough: It’s not just about false positives - An industrial case study](https://link.springer.com/article/10.1007/s10664-021-10109-y). Rahman et al. Empirical Software Engineering, 2022"
-    '14':
-        topic: SE in Domains
-        Tue:
-            date: 2023/04/11
-            name: "Discussion: SE and Data Science"
-            # readings: [Chattopadhyay20Notebooks,Wang21Assessing]
-            required:
-                - "[Assessing and Restoring Reproducibility of Jupyter Notebooks](https://doi.org/10.1145/3324884.3416585). Wang et al. ASE 2021"
-                - "[What’s Wrong with Computational Notebooks? Pain Points, Needs, and Design Opportunities](https://doi.org/10.1145/3313831.3376729). Chattopadhyay et al. CHI 2020"
-
-        Thu:
-            date: 2023/04/13
-            name: "Discussion: SE and Robotics"
-            # readings: [Hermans2015Detecting]
-            required:
-                - "[Crashing Simulated Planes is Cheap: Can Simulation Detect Robotics Bugs Early?](https://ieeexplore.ieee.org/document/8367060). Timperley et al. ICST 2018"
-                - "[Lightweight detection of physical unit inconsistencies without program annotations](https://dl.acm.org/doi/abs/10.1145/3092703.3092722). Ore, Detweiler and Elbaum. ISSTA 2017"
     '15':
         topic: Project Presentations
         Tue:
