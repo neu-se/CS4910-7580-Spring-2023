@@ -151,6 +151,7 @@ weeks:
         Thu:
             date: 2023/03/23
             name: 'Discussion: DevOps'
+            page: 17-devops
             # readings: [Kaldor17Canopy]
             required:
                 - "[Canopy: An End-to-End Performance Tracing And Analysis System](https://doi.org/10.1145/3132747.3132749). Kaldor et al. OSDI 2017"
@@ -160,6 +161,7 @@ weeks:
         Tue:
             name: 'Overview: Collaboration in SE'
             date: 2023/03/28
+            file: 18-knowledge
             deliverable:
                 name: Project Status Update
                 page: /assessments/project-status-update/
