@@ -196,13 +196,13 @@ weeks:
             name: 'Overview: Security and SE, Malicious Components'
             # readings: [Sejfia22Practical]
             required:
+                - "[What Are Weak Links in the Npm Supply Chain?](https://doi.org/10.1145/3510457.3513044). Zahan et al. ICSE 2022"
                 - "[Practical Automated Detection of Malicious Npm Packages](https://doi.org/10.1145/3510003.3510104). Sejfia and Schäfer. ICSE 2022"
         Thu:
             date: 2023/04/13
-            name: "Discussion: Supply Chain Security"
+            name: "Discussion: Security and Course Postmortem"
             # readings: [Zahan22WeakLinks,Rahman22WhySecret]
             required:
-                - "[What Are Weak Links in the Npm Supply Chain?](https://doi.org/10.1145/3510457.3513044). Zahan et al. ICSE 2022"
                 - "[Why secret detection tools are not enough: It’s not just about false positives - An industrial case study](https://link.springer.com/article/10.1007/s10664-021-10109-y). Rahman et al. Empirical Software Engineering, 2022"
     '15':
         topic: Project Presentations
