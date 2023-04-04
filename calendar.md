@@ -168,6 +168,7 @@ weeks:
         Thu:
             date: 2023/03/30
             name: "Discussion: Being Great and Helping Others"
+            page: 19-expertise
             required:
                 - "[What Makes a Great Software Engineer?](https://dl.acm.org/doi/10.5555/2818754.2818839) Li, Ko and Zhu. ICSE 2015"
                 - "[An Exploratory Study of Sharing Strategic Programming Knowledge](https://doi.org/10.1145/3491102.3502070). Arab et al. CHI 2022"
