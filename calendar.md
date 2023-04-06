@@ -179,6 +179,7 @@ weeks:
         Tue:
             date: 2023/04/04
             name: "Discussion: SE and Data Science"
+            page: 20-data-science
             # readings: [Chattopadhyay20Notebooks,Wang21Assessing]
             required:
                 - "[What’s Wrong with Computational Notebooks? Pain Points, Needs, and Design Opportunities](https://doi.org/10.1145/3313831.3376729). Chattopadhyay et al. CHI 2020"
