@@ -189,8 +189,8 @@ weeks:
             date: 2023/04/06
             name: "Discussion: Barriers to Diversity in SE"
             required:
-                - "[Open source barriers to entry, revisited: A sociotechnical perspective](https://dl.acm.org/doi/10.1145/3180155.3180241). Mendez et al. ICSE 2018"
                 - "[\"STILL AROUND\": Experiences and Survival Strategies of Veteran Women Software Developers](https://empirical-software.engineering/assets/pdf/icse23-still-around.pdf). Breukelen et al. ICSE 2023"
+                - "[Open source barriers to entry, revisited: A sociotechnical perspective](https://dl.acm.org/doi/10.1145/3180155.3180241). Mendez et al. ICSE 2018"
     '14':
         topic: Security
         Tue:
