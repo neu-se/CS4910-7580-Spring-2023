@@ -151,7 +151,7 @@ weeks:
         Thu:
             date: 2023/03/23
             name: 'Discussion: DevOps'
-            page: 17-devops
+            page: '/lecture-notes/17-devops'
             # readings: [Kaldor17Canopy]
             required:
                 - "[Canopy: An End-to-End Performance Tracing And Analysis System](https://doi.org/10.1145/3132747.3132749). Kaldor et al. OSDI 2017"
@@ -168,7 +168,7 @@ weeks:
         Thu:
             date: 2023/03/30
             name: "Discussion: Being Great and Helping Others"
-            page: 19-expertise
+            page: '/lecture-notes/19-expertise'
             required:
                 - "[What Makes a Great Software Engineer?](https://dl.acm.org/doi/10.5555/2818754.2818839) Li, Ko and Zhu. ICSE 2015"
                 - "[An Exploratory Study of Sharing Strategic Programming Knowledge](https://doi.org/10.1145/3491102.3502070). Arab et al. CHI 2022"
@@ -179,7 +179,7 @@ weeks:
         Tue:
             date: 2023/04/04
             name: "Discussion: SE and Data Science"
-            page: 20-data-science
+            page: '/lecture-notes/20-data-science'
             # readings: [Chattopadhyay20Notebooks,Wang21Assessing]
             required:
                 - "[What’s Wrong with Computational Notebooks? Pain Points, Needs, and Design Opportunities](https://doi.org/10.1145/3313831.3376729). Chattopadhyay et al. CHI 2020"
