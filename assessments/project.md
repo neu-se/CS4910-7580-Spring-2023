@@ -38,6 +38,15 @@ While it is possible that you successfully implemented your entire project witho
 
 In this section, you should describe in detail challenges that you encountered, and what you did to try to work around them. If you ran into implementation-level challenges (e.g. difficulties with particular technologies, unescapable segfaults, etc) describe your hypothesis for *why* you might have run into this challenge, and any steps that you have taken to try to test that hypothesis/debug the situation. This section provides an opportunity for a project that has no working implementation at all to still receive a grade of "check" - if you could never get the project to work, but can describe various steps that you took to debug your project, you are still creating an artifact that demonstrates your understanding of advanced software engineering processes.
 
+## Project Poster Presentation
+Create a poster that summarizes your project, including the introduction/motivation, the results, and challenges. We have no specific formatting requirements for the poster, but encourage you to use the space primarily for figures/images/tables rather than for blocks of text.
+
+To encourage interactivity, posters will be presented in two ways:
+1. Asynchronously, via Discord: We will share all posters on Discord before class on the 18th. Students can review and comment on posters before they are presented.
+2. During class time on the 18th and 20th, each group will provide a ~5-7 minute presentation of their poster (we will present the posters on the screen) and answer questions. 
+
+We would like to collect posters and highlight them on the course website, allowing future students to get a sense for the kinds of projects that students have undertaken in the past. When we have done this in other classes, students have also later remarked that it was helpful for their project to be highlighted on the class website, as it provided a reputable URL that could be shared with potential employers or collaborators to simultaneously present the student's work and contextualize it within the course. Please include a statement when you upload your poster as to whether you consent to the poster being shared publicly or not. 
+
 ## Final Project Submission
 Create a zip file with your entire implementation, and create a PDF with your report. Submit both on Canvas by April 18 at 11:00am. No late submissions will be accepted. 
 
@@ -50,6 +59,7 @@ To receive the grade of **Check**, the project must satisfy all of these criteri
 * The project includes a response to any feedback provided on the proposal: for any changes requested by the instructor, either those changes were accepted, or there is a discussion in the report of why those changes did not make sense.
 * The project report is between 3-10 pages long, contains at least the three sections outlined above, and captures your efforts on implementing your project
 * The project report and implementation are submitted on time
+* The project poster is submitted on time and summarizes the introduction/motivation to the project, the results, and any signfiicant challenges encountered
 * EITHER:
 	* 1) the project implementation successfully achieves the goals outlined, OR:
 	* 2) the "Project Challenges" section of the report describes in detail the challenges that you faced that prevented you from achieving some goal(s), and the steps that you took to try to overcome those challenges. The record of steps that you took to overcome those challenges is sufficiently detailed to demonstrate that you put a good-faith effort into getting it to work. The project status update supports this narrative.
@@ -58,7 +68,7 @@ To receive the grade of **Check-**: the project must satisfy all of these criter
 * The project proposal is submitted on time. The proposal is roughly one page long and includes a good-faith effort to address each of the 5 points outlined above.
 * The project status update is submitted on time. The status update is roughly 2-4 paragraphs long and includes a good-faith effort to address each of the 5 points outlined above.
 * The project report is between 3-10 pages long, contains at least the three sections outlined above, with a good-faith effort to respond to the prompts.
-* The project report and implementation are submitted on time
+* The project report, implementation and/or poster are submitted on time
 * The project implementation may not achieve all of the goals outlined, the project challenges section may not include a detailed discussion of the challenges encountered and good-faith attempts to overcome those challenges.
 
 
