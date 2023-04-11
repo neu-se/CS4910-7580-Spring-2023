@@ -197,6 +197,7 @@ weeks:
             date: 2023/04/11
             name: 'Overview: Security and SE, Malicious Components'
             # readings: [Sejfia22Practical]
+            file: 22-security
             required:
                 - "[What Are Weak Links in the Npm Supply Chain?](https://doi.org/10.1145/3510457.3513044). Zahan et al. ICSE 2022"
                 - "[Practical Automated Detection of Malicious Npm Packages](https://doi.org/10.1145/3510003.3510104). Sejfia and Schäfer. ICSE 2022"
