@@ -48,7 +48,7 @@ To encourage interactivity, posters will be presented in two ways:
 We would like to collect posters and highlight them on the course website, allowing future students to get a sense for the kinds of projects that students have undertaken in the past. When we have done this in other classes, students have also later remarked that it was helpful for their project to be highlighted on the class website, as it provided a reputable URL that could be shared with potential employers or collaborators to simultaneously present the student's work and contextualize it within the course. Please include a statement when you upload your poster as to whether you consent to the poster being shared publicly or not. 
 
 ## Final Project Submission
-Create a zip file with your entire implementation, and create a PDF with your report. Submit both on Canvas by April 18 at 11:00am. No late submissions will be accepted. 
+Create a zip file with your entire implementation artifact. Create a PDF with your report, and a separate PDF with your poster. Submit all three on Canvas by April 18 at 11:00am (use the assignment labeled "Implementation Project" for the implementation itself, "Report" for the report and "Poster" for the poster). No late submissions will be accepted. 
 
 ## Grading Rubric
 Your project will be graded on the scale of (Unacceptable, Check-, Check, Check+). The criteria for each grade are described below:
