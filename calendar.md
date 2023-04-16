@@ -203,6 +203,7 @@ weeks:
                 - "[Practical Automated Detection of Malicious Npm Packages](https://doi.org/10.1145/3510003.3510104). Sejfia and Schäfer. ICSE 2022"
         Thu:
             date: 2023/04/13
+            page: '/lecture-notes/23-security'
             name: "Discussion: Security and Course Postmortem"
             # readings: [Zahan22WeakLinks,Rahman22WhySecret]
             required:
