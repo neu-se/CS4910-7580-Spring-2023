@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/CS4910-7580-Spring-2023/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script src="/CS4910-7580-Spring-2023/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/CS4910-7580-Spring-2023/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Discussion - SDI | CS4973/7580, Spring 2023</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Discussion - SDI" />
+<meta name="author" content="Jonathan Bell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Northeastern University CS 4793/7580 “Advanced Software Engineering”, Spring 2023. Professor Jonathan Bell." />
+<meta property="og:description" content="Northeastern University CS 4793/7580 “Advanced Software Engineering”, Spring 2023. Professor Jonathan Bell." />
+<link rel="canonical" href="https://neu-se.github.io/CS4910-7580-Spring-2023/lecture-notes/2-sdi" />
+<meta property="og:url" content="https://neu-se.github.io/CS4910-7580-Spring-2023/lecture-notes/2-sdi" />
+<meta property="og:site_name" content="CS4973/7580, Spring 2023" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Discussion - SDI" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Jonathan Bell"},"description":"Northeastern University CS 4793/7580 “Advanced Software Engineering”, Spring 2023. Professor Jonathan Bell.","url":"https://neu-se.github.io/CS4910-7580-Spring-2023/lecture-notes/2-sdi","@type":"WebPage","headline":"Discussion - SDI","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  <div class="side-bar">
+  <div class="site-header">
+    <a href="/CS4910-7580-Spring-2023/" class="site-title lh-tight">
+  CS4973/7580, Spring 2023
+
+</a>
+    <a href="#" id="menu-button" class="site-button">
+      <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+    </a>
+  </div>
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+    
+    
+      <ul class="nav-list"><li class="nav-list-item"><a href="#" class="nav-list-expander" aria-label="toggle links in Assessments category">
+            <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+          </a><a href="/CS4910-7580-Spring-2023/assessments/" class="nav-list-link">Assessments</a><ul class="nav-list"><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/paper-proposal/" class="nav-list-link">Reflection Paper Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-proposal/" class="nav-list-link">Preliminary Project Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/revised-project-proposal/" class="nav-list-link">Revised Project Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/paper/" class="nav-list-link">Reflection Paper</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-status-update/" class="nav-list-link">Project Status Update</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project/" class="nav-list-link">Implementation Project</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-showcase" class="nav-list-link">Project Showcase</a></li></ul></li><li class="nav-list-item active"><a href="/CS4910-7580-Spring-2023/calendar/" class="nav-list-link">Calendar</a></li><li class="nav-list-item"><a href="/CS4910-7580-Spring-2023/resources/" class="nav-list-link">Other Resources</a></li><li class="nav-list-item"><a href="/CS4910-7580-Spring-2023/policies/" class="nav-list-link">Policies</a></li></ul>
+    
+  </nav>
+
+  
+  
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  
+</div>
+
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search CS4973/7580, Spring 2023" aria-label="Search CS4973/7580, Spring 2023" autocomplete="off">
+    <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+    <nav aria-label="Auxiliary" class="aux-nav">
+  <ul class="aux-nav-list">
+    
+      <li class="aux-nav-list-item">
+        <a href="https://jonbell.net" class="site-button"
+          
+        >
+          Jonathan Bell
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+  
+</div>
+
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+  
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+      <ol class="breadcrumb-nav-list">
+        
+          <li class="breadcrumb-nav-list-item"><a href="/CS4910-7580-Spring-2023/calendar/">Calendar</a></li>
+        
+        <li class="breadcrumb-nav-list-item"><span>Discussion - SDI</span></li>
+      </ol>
+    </nav>
+  
+
+
+      <div id="main-content" class="main-content" role="main">
+        
+          <div class="fs-1 text-right fw-300">Last updated:  | <a href="/CS4910-7580-Spring-2023/lecture-notes/2-sdi">Permalink</a></div>
+<h1 id="discussion-software-aspects-of-strategic-defense-systems">
+  
+  
+    <a href="#discussion-software-aspects-of-strategic-defense-systems" class="anchor-heading" aria-labelledby="discussion-software-aspects-of-strategic-defense-systems"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Discussion: Software Aspects of Strategic Defense Systems
+  
+  
+</h1>
+    
+
+<p>These notes roughly capture the (mostly unedited) comments from the class:</p>
+
+<ol>
+  <li>Hot Takes/First Impressions: What did you think of these essays, overall?
+    <ol>
+      <li>Requirements: “Do everything perfectly”</li>
+      <li>Important/interesting to discuss education of programmers</li>
+      <li>Is this actually a problem of programming languages?</li>
+      <li>Most (or all?) of the problems discussed exist not only for the SDI, but in other contexts too</li>
+      <li>How to reason about what a reasonable/good investment is?
+        <ol>
+          <li>Applied research
+            <ol>
+              <li>Make the missile hit the exact target</li>
+            </ol>
+          </li>
+          <li>Fundamental research
+            <ol>
+              <li>Make software more reliable</li>
+              <li>What we needed then: concurrency, fault tolerant systems</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>Wow, we sure had much different hardware at the time, and the difference between a high and a low level programming language…</li>
+      <li>The hard requirements (never miss a target) are pretty insane
+        <ol>
+          <li>Not. Ever. Possible.</li>
+        </ol>
+      </li>
+      <li>We have had actual documented cases of missile detection systems providing false positives that would have resulted in nuclear war had not a human intervened</li>
+    </ol>
+  </li>
+  <li>Essays on software process
+    <ol>
+      <li>Why software is unreliable
+        <ol>
+          <li>Continuous vs discrete states. If continuous states, can’t test all states in advance</li>
+          <li>It depends on what you want to prove and in which circumstances</li>
+          <li>How do we understand software - decompose it into modules?
+            <ol>
+              <li>Is it possible for modules to break down, and lead to unreliable software?
+                <ol>
+                  <li>Specifying WHICH module to use can be a challenge</li>
+                  <li>By construction, different modules must be built by different teams</li>
+                  <li>Concurrency/multi-processing</li>
+                  <li>Different modules built by different teams may be unreliable in themselves, especially if they are entirely disconnected in their development structure</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li>Software engineers are not trained sufficiently
+            <ol>
+              <li>Insufficient understanding of when different methods are applicable, and under what circumstances they can be expected to generalize/continue to perform</li>
+              <li>“Think like a computer” is not an appropriate teaching method
+                <ol>
+                  <li>Programming by trial-and-error (but this requires tests)</li>
+                </ol>
+              </li>
+              <li>Not good enough tooling support</li>
+              <li>Higher level languages might help “think like a computer” by raising the abstraction level</li>
+              <li>Rigorous training in requirements writing and decomposition - understanding in particular implicit requirements for behaviors that should NOT occur</li>
+              <li>How much of this problem is related to EXPERIENCE that can’t be trained/shared, versus training?
+                <ol>
+                  <li>Prototyping/iterative decomposition</li>
+                  <li>Patterns/architecture?</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>Why SDI will be untrustworthy
+        <ol>
+          <li>“Untrustworthy” - this means not 100% perfect performance - should that just be “nuff said”?</li>
+          <li>This is realistically a systems problem, not just including the post-launch phase (intelligence gathering, pre-launch capabilities, other countermeasures)</li>
+          <li>Example: How to develop fire control software? What are the inputs? What are the algorithms to use? How to test this?
+            <ol>
+              <li>Start with the given inputs: we have some ballistic missile that is on some trajectory</li>
+              <li>AI has gotten <em>so</em> much further</li>
+            </ol>
+          </li>
+          <li>Many of the assumptions are grounded on the current state of hardware/software at the day</li>
+        </ol>
+      </li>
+      <li>Why conventional SW development does not produce reliable programs</li>
+    </ol>
+  </li>
+  <li>Essays on “emerging approaches”
+    <ol>
+      <li>The limits of SE methods
+        <ol>
+          <li>Waterfall process
+            <ol>
+              <li>At a system-level, the entire system must be correct “the first time”</li>
+              <li>Requirements/interfaces between modules must be carefully gathered, designed, analyzed (Rely on experience building previous things to do this)</li>
+            </ol>
+          </li>
+          <li>Structured programming</li>
+          <li>Formally specified interfaces
+            <ol>
+              <li>What is an example of a difficult design decision that could be easily overlooked?
+                <ol>
+                  <li>Constraints of execution time, space requirements for modules must be specified ahead</li>
+                  <li>Disconnect between project managers/engineers - particularly in terms of what is actually possible with current technology</li>
+                  <li>Anything related to assumptions of the countermeasures of the enemy, all of which must be based on (uncertain) intelligence (plus the fact that there might be gas in that enemy software)</li>
+                  <li>Implicit assumptions, e.g. on iteration over a hash table</li>
+                </ol>
+              </li>
+              <li>Is a solution to this grounded in software, in humans, or in both?
+                <ol>
+                  <li>Some things can be solved in software. Especially discussion of multi-processing, baking these kinds of solutions into languages (e.g. Rust, async actors)</li>
+                  <li>Some things need to be solved in human processes.
+                    <ol>
+                      <li>Software can be used to help mediate communication.</li>
+                      <li>How to organize high-level design vs low-level design?</li>
+                      <li>How to structure teams?</li>
+                    </ol>
+                  </li>
+                  <li>Maybe most/all things are socio-technical, and depending on the problem, might be more of one side than the other</li>
+                  <li>Maybe we need to break bad habits?</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li>Cooperative multiprocessing using locks/signals</li>
+          <li>The Software Cost Reduction project
+            <ol>
+              <li>What was learned from this 8+ year effort?
+                <ol>
+                  <li>Need complete black-box requirements upfront</li>
+                  <li>MODULES, and also why to use modules</li>
+                  <li>Precise documentation using formal methods (compare to “functionality over documentation”)</li>
+                </ol>
+              </li>
+              <li>“Every new concept requires at least 2 generations of engineers to become the standard”</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>AI and the SDI
+        <ol>
+          <li>AI has gotten pretty far compared to what it was</li>
+          <li>“People speak of AI as if it were some magic body of new ideas”</li>
+          <li>We have found out that many things that we thought were hard (chess) are “easy” others (recognizing blocks) hard</li>
+        </ol>
+      </li>
+      <li>Can automatic programming solve the SDI problem?
+        <ol>
+          <li>Even if we have ChatGPT to generate code, still need to generate prompt</li>
+          <li>Helps programmer with the “simple” things, and as this is continued to be used, you eventually might generate more reliable code</li>
+          <li>GitHub CoPilot is a big “wow” but not the end of the story</li>
+          <li>Programs need to be <em>read</em> by humans also: are these automatic techniques making things that are not maintainable</li>
+          <li>What kind of explainability/traceability do we get from this?</li>
+          <li>What about new programming languages?
+            <ol>
+              <li>Garbage collectors?</li>
+              <li>Programming by specification</li>
+              <li>Type systems</li>
+              <li>Would a higher level language lead to more reliable programs? Pros and cons…
+                <ol>
+                  <li>As more things are abstracted away, developer may become less aware of what is actually happening under the hood</li>
+                  <li>How to conceptualize “real-time” - millisecond latency is OK</li>
+                  <li>Performance is harder to reason about</li>
+                  <li>The low-level mechanisms implemented by the high-level language <em>should</em> be correct</li>
+                  <li>Higher-level problems may be easier to reason about in maintenace</li>
+                  <li>Can actually spend time focusing on what it is that you need to do, rather than how to implement the low-level parts of it</li>
+                </ol>
+              </li>
+              <li>How do programming environments improve reliability?
+                <ol>
+                  <li>What is a programming environment in this context? (Other than Unix™)
+                    <ol>
+                      <li>Operating system, editors</li>
+                    </ol>
+                  </li>
+                  <li>What programming environments make software more reliable/faster to build?
+                    <ol>
+                      <li>IDEs + language servers - include linting/test/analysis results directly inside of an integrated environment. Refactoring.</li>
+                      <li>Simulation of physical devices in virtual environments</li>
+                      <li>Version control + collaboration tools</li>
+                      <li>Continuous integration</li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>Can program verification make the SDI software reliable?
+        <ol>
+          <li>What was missing at the time? Languages, solvers, proofs assistants</li>
+          <li>What are the properties that you are going to verify?</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+        
+
+        
+
+        
+
+  <hr>
+  <footer>
+    
+
+    <p class="text-small text-grey-dk-100 mb-0">&copy; 2022 Jonathan Bell. Released under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license</p>
+
+    
+  </footer>
+
+
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+

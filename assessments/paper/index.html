@@ -1,0 +1,575 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/CS4910-7580-Spring-2023/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script src="/CS4910-7580-Spring-2023/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/CS4910-7580-Spring-2023/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Reflection Paper | CS4973/7580, Spring 2023</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Reflection Paper" />
+<meta name="author" content="Jonathan Bell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Description of Course Paper" />
+<meta property="og:description" content="Description of Course Paper" />
+<link rel="canonical" href="https://neu-se.github.io/CS4910-7580-Spring-2023/assessments/paper/" />
+<meta property="og:url" content="https://neu-se.github.io/CS4910-7580-Spring-2023/assessments/paper/" />
+<meta property="og:site_name" content="CS4973/7580, Spring 2023" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Reflection Paper" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Jonathan Bell"},"description":"Description of Course Paper","url":"https://neu-se.github.io/CS4910-7580-Spring-2023/assessments/paper/","@type":"WebPage","headline":"Reflection Paper","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  <div class="side-bar">
+  <div class="site-header">
+    <a href="/CS4910-7580-Spring-2023/" class="site-title lh-tight">
+  CS4973/7580, Spring 2023
+
+</a>
+    <a href="#" id="menu-button" class="site-button">
+      <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+    </a>
+  </div>
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+    
+    
+      <ul class="nav-list"><li class="nav-list-item active"><a href="#" class="nav-list-expander" aria-label="toggle links in Assessments category">
+            <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+          </a><a href="/CS4910-7580-Spring-2023/assessments/" class="nav-list-link">Assessments</a><ul class="nav-list"><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/paper-proposal/" class="nav-list-link">Reflection Paper Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-proposal/" class="nav-list-link">Preliminary Project Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/revised-project-proposal/" class="nav-list-link">Revised Project Proposal</a></li><li class="nav-list-item  active"><a href="/CS4910-7580-Spring-2023/assessments/paper/" class="nav-list-link active">Reflection Paper</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-status-update/" class="nav-list-link">Project Status Update</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project/" class="nav-list-link">Implementation Project</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-showcase" class="nav-list-link">Project Showcase</a></li></ul></li><li class="nav-list-item"><a href="/CS4910-7580-Spring-2023/calendar/" class="nav-list-link">Calendar</a></li><li class="nav-list-item"><a href="/CS4910-7580-Spring-2023/resources/" class="nav-list-link">Other Resources</a></li><li class="nav-list-item"><a href="/CS4910-7580-Spring-2023/policies/" class="nav-list-link">Policies</a></li></ul>
+    
+  </nav>
+
+  
+  
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  
+</div>
+
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search CS4973/7580, Spring 2023" aria-label="Search CS4973/7580, Spring 2023" autocomplete="off">
+    <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+    <nav aria-label="Auxiliary" class="aux-nav">
+  <ul class="aux-nav-list">
+    
+      <li class="aux-nav-list-item">
+        <a href="https://jonbell.net" class="site-button"
+          
+        >
+          Jonathan Bell
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+  
+</div>
+
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+  
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+      <ol class="breadcrumb-nav-list">
+        
+          <li class="breadcrumb-nav-list-item"><a href="/CS4910-7580-Spring-2023/assessments/">Assessments</a></li>
+        
+        <li class="breadcrumb-nav-list-item"><span>Reflection Paper</span></li>
+      </ol>
+    </nav>
+  
+
+
+      <div id="main-content" class="main-content" role="main">
+        
+          <h2 class="fs-6" id="reflection-paper">
+  
+  
+    <a href="#reflection-paper" class="anchor-heading" aria-labelledby="reflection-paper"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 
+    
+    Reflection Paper
+    
+    <strong class="label label-red">Due Tuesday Mar 14, 11:00am EDT</strong>
+
+  
+  
+</h2>
+    
+
+
+<p>The structure of this class is designed to provide a broad survey of many topics in software engineering practice and research:</p>
+
+<ul>
+  <li>Software Process</li>
+  <li>Modularity and Design</li>
+  <li>Mining Software Repositories</li>
+  <li>Open Source</li>
+  <li>Testing</li>
+  <li>Continuous Integration</li>
+  <li>Devops</li>
+  <li>Expertise and knowledge sharing</li>
+  <li>Security</li>
+  <li>Software engineering in specific domains</li>
+</ul>
+
+<p>The goal of the reflection paper is for you to select a topic of particular personal interest, identify five research articles (that are not required readings for this course), read them, and organize your reaction to the topic in a <em>reflection paper</em>. The reflection paper provides you to an opportunity to apply critical reasoning skills in the context of the research papers that we discuss in class, and to dig deeper into a topic of your own particular interest.</p>
+
+<p>This is <em>not</em> a literature review: the goal with this paper is for you to provide some editorial critiques of the work and express your own opinions, rather than to provide a fair and direct summary of the contents of each paper. The expected length of the reflection paper is roughly 2,500 words.</p>
+
+<p>There are three main deliverables for the reflection paper:</p>
+<ol>
+  <li><a href="/CS4910-7580-Spring-2023/assessments/paper-proposal/">Paper proposal</a></li>
+  <li>The reflection paper</li>
+  <li>A short presentation in class of your findings</li>
+</ol>
+
+<p>The objectives for the reflection paper are to:</p>
+<ul>
+  <li>Compare and contrast different software testing and analysis approaches</li>
+  <li>Critically analyze research projects</li>
+  <li>Cultivate new ideas for research directions</li>
+</ul>
+
+<p>Once you have selected the papers that you will respond to, consider one (or more) of the following prompts:</p>
+<ul>
+  <li>What are common themes or goals between these papers? Do they share similar assumptions (in terms of how software is designed and tested)?</li>
+  <li>How do these works complement each other?</li>
+  <li>Based on your own experiences developing software, do you believe that the evaluations in these papers provide sufficient evidence to draw the conclusions that are claimed?</li>
+  <li>If you have experience with other related works in software engineering, how do you think those works compare?</li>
+  <li>Are there next-steps that you think could be applied to extend the ideas presented in these papers?</li>
+  <li>Were there parts of some of these works that you thought were poorly explained, and could have been written in another way to be more accessible?</li>
+</ul>
+
+<p>You should consider these prompts as jumping-off points: feel free to respond to one or more of these questions in your paper, or alternatively, something completely different. The most important part is that your paper should convey <em>your own reactions</em> to the six papers that you have selected — demonstrating that you read the papers and thought about them.</p>
+
+<p><strong>This is an individual assignment</strong>. The goal of this assignment is to provide your <em>personal</em> reflection to the topic of your choice. Papers that are substantially similar to each other (or to third-party content) will receive a score of 0, with no opportunity for a revision. If you have any questions or concerns of what constitutes plagiarism, please reach out to the instructor immediately.</p>
+<h2 id="formatting">
+  
+  
+    <a href="#formatting" class="anchor-heading" aria-labelledby="formatting"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Formatting
+  
+  
+</h2>
+    
+<p>Feel free to use whatever word processing environment you prefer. We strongly encourage that you use some editor that will help you manage a bibliography — like LaTeX + BibTex, or Word + Endnote.  Please clearly identify the one paper from the required reading list for the course plus the five additional papers that you intend to discuss — one way to do that might be to include them in your bibliography, and cite them in the first paragraph of your paper.</p>
+<h2 id="presentation">
+  
+  
+    <a href="#presentation" class="anchor-heading" aria-labelledby="presentation"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Presentation
+  
+  
+</h2>
+    
+<p>To share your experience with the rest of the class, prepare a lightning talk (8 minutes) that summarizes what you learned about this topic, and your reaction to it. The goal of the lightning talk is to share one or two things that you learned that were interesting to you: an open (or closed) problem in that research area, some methodology or tool that addresses a known problem, etc. The presentation will be graded entirely on a “you did it” or “you didn’t” basis, as long as you show up at the assigned time and talk about the topic.</p>
+<h2 id="grading">
+  
+  
+    <a href="#grading" class="anchor-heading" aria-labelledby="grading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Grading
+  
+  
+</h2>
+    
+<p>Your reflection paper will be graded on the scale of (Unacceptable, Check-, Check, Check+). The criteria for each grade are described below.</p>
+
+<p>To receive the grade of <strong>Check</strong>, the paper/presentation must satisfy all of these criteria:</p>
+<ul>
+  <li>The paper is approximately 2,500 words (plus or minus a few hundred is OK; if you are far short of 2,500 you might consider deepening your exploration; if you are far over 2,500 words, you might consider condensing your efforts)</li>
+  <li>The paper responds to one of the articles on the course’s required reading list, plus the five articles that were approved by the course staff via the <a href="/CS4910-7580-Spring-2023/assessments/paper-proposal/">paper proposal</a></li>
+  <li>The paper demonstrates a thoughtful understanding of the papers selected</li>
+  <li>The paper uses relevant examples from the papers discussed in class to support and describe your reactions to the works</li>
+  <li>The paper uses language that is understandable, and generally does not distract from the content of the work</li>
+  <li>The presentation describes a concept related to the paper.</li>
+</ul>
+
+<p>To receive the grade of <strong>Check-</strong>, the paper must satisfy all of these criteria:</p>
+<ul>
+  <li>The paper is between 1,500-2,500 words</li>
+  <li>The paper responds to one of the articles on the course’s required reading list, plus the five articles that were approved by the course staff via the <a href="/CS4910-7580-Spring-2023/assessments/paper-proposal/">paper proposal</a></li>
+  <li>The paper demonstrates a limited understanding of the papers selected, focusing primarily on summarizing the content of the papers without demonstration of higher-level understanding of them</li>
+</ul>
+
+<p>Submissions that do not meet the criteria for “Check-“ will receive the grade of “Unacceptable.” Submissions that exceed the qualities outlined for “Check” (e.g. include additional, insightful connections between the papers discussed in class and other works, uses particularly sophisticated and engaging language, and generally demonstrates an exceptional and thorough understanding of the selected papers) may receive the grade of “Check+”. As per the course policies, note that a grade of “Check” is sufficient to receive an A in the class.</p>
+<h2 id="submission">
+  
+  
+    <a href="#submission" class="anchor-heading" aria-labelledby="submission"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Submission
+  
+  
+</h2>
+    
+<p>Submit your paper on Canvas. The paper is due on March 14 at 11:00am. No late submissions will be accepted. Presentations will occur in-class on March 14 and 16.</p>
+<h2 id="revision">
+  
+  
+    <a href="#revision" class="anchor-heading" aria-labelledby="revision"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Revision
+  
+  
+</h2>
+    
+<p>Students who make a good faith effort on the paper (e.g. submit a document on time that is conformant to the general guidelines explained above), and receive a grade below “Check” will receive detailed feedback on their paper, and be allowed to resubmit the paper (within 2 weeks), under the understanding that the <em>highest</em> grade of the submissions will be used. Students who receive a grade of “Check” may <em>not</em> resubmit their work to attempt to achieve a “Check+” (again, note that in this situation, this would have no impact on your course grade).</p>
+<h2 id="list-of-all-articles-selected-by-students">
+  
+  
+    <a href="#list-of-all-articles-selected-by-students" class="anchor-heading" aria-labelledby="list-of-all-articles-selected-by-students"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> List of all articles selected by students
+  
+  
+</h2>
+    
+<p>We have aggregated all of the articlds selected by students for their reflection papers into lists organized by topic (topics with more articles listed reflect topics that more students selected for their reflection papers)</p>
+<h3 id="modularity-and-design">
+  
+  
+    <a href="#modularity-and-design" class="anchor-heading" aria-labelledby="modularity-and-design"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Modularity and design
+  
+  
+</h3>
+    
+<ul>
+  <li><a href="https://ieeexplore.ieee.org/document/7522224">“Comparative analysis of functional and object-oriented programming”, Alic et al.</a></li>
+  <li><a href="https://ieeexplore.ieee.org/document/7194625">“A comparative study of programming languages in rosetta code”, Nanz and  Furia</a></li>
+  <li><a href="https://doi.org/10.1145/3126905">“A large-scale study of programming languages and code quality in github”, Ray et al.</a></li>
+  <li><a href="https://arxiv.org/pdf/1901.10220.pdf">“On the impact of programming languages on code quality”, Berger et al.</a></li>
+  <li><a href="https://ceur-ws.org/Vol-2510/sattose2019_paper_12.pdf">“Code quality metrics for the functional side of the object-oriented language c#”, Zuilhof et al.</a></li>
+  <li>K Fedoseev, N Askarbekuly, A E Uzbekova, and M Mazzara. Application of data-oriented design in game development. Journal of Physics: Conference Series, 1694(1):012035, dec 2020.</li>
+  <li>Apostolos Ampatzoglou and Alexander Chatzigeorgiou. Evaluation of object-oriented design patterns in game development. Information and Software Technology, 49(5):445–454, 2007.</li>
+  <li>Weishan Zhang, Dong Han, Thomas Kunz, and Klaus Marius Hansen. Mobile game development: Object-orientation or not. In 31st Annual International Computer Software and Applications Conference (COMPSAC 2007), volume 1, pages 601–608, 2007.</li>
+  <li>David Wingqvist, Filip Wickström, and Suejb Memeti. Evaluating the performance of object-oriented and data-oriented design with multi-threading in game development. In 2022 IEEE Games, Entertainment, Media Conference (GEM), pages 1–6, 2022.</li>
+  <li>Jessica D. Bayliss. The data-oriented design process for game development. Computer, 55(5):31–38, 2022.</li>
+  <li>Jessica D. Bayliss. Developing games with data-oriented design. In Proceedings of the 6th International ICSE Workshop on Games and Software Engineering: Engineering Fun, Inspiration, and Motivation, GAS ’22, page 30–36, New York, NY, USA, 2022. Association for Computing Machinery.</li>
+</ul>
+<h3 id="open-source">
+  
+  
+    <a href="#open-source" class="anchor-heading" aria-labelledby="open-source"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Open source
+  
+  
+</h3>
+    
+<ul>
+  <li>Neamtiu, I., Xie, G., Chen, J. (2013). Towards a better understanding of software evolution: an empirical study on open-source software. Journal of Software: Evolution and Process, 25(3), 193-218.</li>
+  <li>Comino, S., Manenti, F. M. (2011). Dual licensing in open source software markets. Information Economics and Policy, 23(3-4), 234-242.</li>
+  <li>Capra, E., Francalanci, C., Merlo, F. (2008). An empirical study on the relationship between software design quality, development effort and governance in open source projects. IEEE Transactions on Software Engineering, 34(6), 765-782.</li>
+  <li>Tan, X., Zhou, M., Fitzgerald, B. (2020, June). Scaling open source communities: An empirical study of the Linux kernel. ACM/IEEE 42nd International Conference on Software Engineering (pp. 1222-1234).</li>
+  <li>Qiu, H. S., Li, Y. L., Padala, S., Sarma, A., Vasilescu, B. (2019). The signals that potential contributors look for when choosing open-source projects. Proceedings of the ACM on Human-Computer Interaction, 3(CSCW), 1-29..</li>
+  <li>J. Coelho and M. T. Valente, “Why modern open source projects fail,” in Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering, ESEC/FSE 2017, (New York, NY, USA), p. 186–196, Association for Computing Machinery, 2017.</li>
+  <li>C. Mendez, H. S. Padala, Z. Steine-Hanson, C. Hilderbrand, A. Horvath, C. Hill, L. Simpson, N. Patil, A. Sarma, and M. Burnett, “Open source barriers to entry, revisited: A sociotechnical perspective,” in Proceedings of the 40th International Conference on Software Engineering, ICSE ’18, (New York, NY, USA), p. 1004–1015, Association for Computing Machinery, 2018.</li>
+  <li>X. Tan, M. Zhou, and B. Fitzgerald, “Scaling open source communities: An empirical study of the linux kernel,” in Proceedings of the ACM/IEEE 42nd International Conference on Software Engineering, ICSE ’20, (New York, NY, USA), p. 1222–1234, Association for Computing Machinery, 2020.</li>
+  <li>E. Dias, P. Meirelles, F. Castor, I. Steinmacher, I. Wiese, and G. Pinto, “What makes a great maintainer of open source projects?,” in Proceedings of the 43rd International Conference on Software Engineering, ICSE ’21, p. 982–994, IEEE Press, 2021.</li>
+  <li>T. Dey, A. Karnauch, and A. Mockus, “Representation of developer expertise in open source software,” in Proceedings of the 43rd International Conference on Software Engineering, ICSE ’21, p. 995–1007, IEEE Press, 2021.</li>
+  <li>D. Riehle, P. Riemer, C. Kolassa, and M. Schmidt, “Paid vs. volunteer work in open source,” in Proceedings of the Annual Hawaii International Conference on System Sciences, 01 2014.</li>
+</ul>
+<h3 id="testing">
+  
+  
+    <a href="#testing" class="anchor-heading" aria-labelledby="testing"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Testing
+  
+  
+</h3>
+    
+<ul>
+  <li>Dirk Beyer, Adam J Chlipala, Thomas A Henzinger, Ranjit Jhala, and Rupak Majumdar. 2004. Generating tests from counterexamples. In Proceedings. 26th International Conference on Software Engineering. IEEE, 326–335.</li>
+  <li>Cristian Cadar, Daniel Dunbar, Dawson R Engler, et al. 2008. Klee: unassisted and automatic generation of high-coverage tests for complex systems programs.. In OSDI, Vol. 8. 209–224.</li>
+  <li>Koen Claessen and John Hughes. 2000. QuickCheck: a lightweight tool for random testing of Haskell programs. In Proceedings of the fifth ACM SIGPLAN international conference on Functional programming. 268-279.</li>
+  <li>George Fink and Matt Bishop. 1997. Property-based testing: a new approach to testing for assurance. ACM SIGSOFT Software Engineering Notes 22, 4 (1997), 74-80.</li>
+  <li>Thomas A Henzinger, Ranjit Jhala, Rupak Majumdar, and Gregoire Sutre. 2002. Lazy abstraction. In Proceedings of the 29th ACM SIGPLAN-SIGACT symposium on Principles of programming languages. 58-70.</li>
+  <li>Patrice Godefroid, Nils Klarlund, and Koushik Sen. 2005. DART: Directed automated random testing. In Proceedings of the 2005 ACM SIGPLAN conference on Programming language design and implementation. 213–223.</li>
+  <li><a href="https://doi.org/10.1007/978-3-030-23535-2_17">“Web accessibility evaluation methods: A systematic review. Design, User Experience, and Usability”, Nuñez et al.</a></li>
+  <li><a href="https://doi.org/10.1109/wispnet51692.2021.9419464">“A brief survey of current software engineering practices in continuous integration and automated accessibility testing”, Sane</a></li>
+  <li><a href="https://doi.org/10.1109/icse43902.2021.00128">“Aid: An automated detector for gender-inclusivity bugs in OSS Project Pages”, Chatterjee et al.</a></li>
+  <li><a href="https://doi.org/10.1109/chase52884.2021.00028">“Mobile accessibility guidelines adoption under the perspective of developers and designers”, de Almeida and Gama</a></li>
+  <li><a href="https://doi.org/10.1109/mmul.2017.21">“Evaluating responsive web design’s impact on Blind Users”, Nogueira et al.</a></li>
+  <li><a href="https://doi.org/10.1109/vl/hcc53370.2022.9833098">“Accessibility of UI frameworks and libraries for programmers with visual impairments”, Pandey et al.</a></li>
+  <li>Lin, Jun-Wei, Reyhaneh Jabbarvand, and Sam Malek. “Test transfer across mobile apps through semantic mapping.” 2019 34th IEEE/ACM International Conference on Automated Software Engineering (ASE). IEEE, 2019.</li>
+  <li>Behrang, Farnaz, and Alessandro Orso. “Test migration between mobile apps with similar functionality.” 2019 34th IEEE/ACM International Conference on Automated Software Engineering (ASE). IEEE, 2019.</li>
+  <li>Mariani, Leonardo, et al. “Semantic matching of gui events for test reuse: are we there yet?.” Proceedings of the 30th ACM SIGSOFT International Symposium on Software Testing and Analysis. 2021.</li>
+  <li>Bajammal, Mohammad, and Ali Mesbah. “Semantic Web Accessibility Testing via Hierarchical Visual Analysis.” 2021 IEEE/ACM 43rd International Conference on Software Engineering (ICSE). IEEE, 2021.</li>
+  <li>Walsh, Thomas A., Phil McMinn, and Gregory M. Kapfhammer. “Automatic detection of potential layout faults following changes to responsive web pages (N).” 2015 30th IEEE/ACM International Conference on Automated Software Engineering (ASE). IEEE, 2015.</li>
+  <li><a href="https://doi.org/10.1145/2970276.2970313">“Automated Model-Based Android GUI Testing Using Multi-Level GUI Comparison Criteria”, Baek and Bae</a></li>
+  <li><a href="https://doi.org/10.1145/769953.769966">“Automated testing of virtual reality application interfaces.”, Bierbaum et al.</a></li>
+  <li><a href="https://doi.org/10.1145/2635868.2635923">“On the efficiency of automated testing”, Böhme and Paul</a></li>
+  <li><a href="https://doi.org/10.1109/ICST.2018.00021">Automated Accessibility Testing of Mobile Apps”, Eler et al.</a></li>
+  <li>Robert Nilsson and Jeff Offutt. 2007. Automated Testing of Timeliness : A Case Study. (2007).</li>
+  <li>T.Y Chen, S.C. Cheung, and S.M. Yiu. Metamorphic testing: a new approach for generating next test cases.</li>
+  <li>Kyle Dewey, Jared Roesh, and Ben Hardekopf. Language fuzzing using constraint logic programming.</li>
+  <li>Kyle Dewey, Jared Roesch, and Ben Hardekopf. Fuzzing the Rust Typechecker UsingCLP.</li>
+  <li>Sungjae Hwang, Sungho Lee, Jihoon Kim, and Sukyoung Ryu. JUSTGen: Effective Test Generation for Unspecified JNI Behaviors on JVMs.</li>
+  <li>Xuejun Yang, Yang Chen, Eric Eide, and John Regehr. Finding and Understanding Bugs in C Compilers.</li>
+  <li>Alex Groce, Chaoqiang Zhang, Eric Eide, Yang Chen, and John Regehr. Swarm testing. In Proc. ISSTA, pages 78–88, July 2012</li>
+  <li>Y. Jia and M. Harman, “An analysis and survey of the development of mutation testing,” IEEE Transactions on Software Engineering, vol. 37, no. 5. pp. 649–678, 2011.</li>
+  <li>G. Petrović, M. Ivanković, B. Kurtz, P. Ammann, and R. Just, “An industrial application of mutation testing: Lessons, challenges, and research directions,” in Proceedings - 2018 IEEE 11th International Conference on Software Testing, Verification and Validation Workshops, ICSTW 2018, Jul. 2018, pp. 47–53.</li>
+  <li>G. Petrovic, M. Ivankovic, G. Fraser, and R. Just, “Practical Mutation Testing at Scale: A view from Google,” IEEE Transactions on Software Engineering, vol. 48, no. 10. Institute of Electrical and Electronics Engineers Inc., pp. 3900–3912, Oct. 01, 2022.</li>
+  <li>R. J. Lipton and F. G. Sayward, “Hints on test data selection: Help for the practicing programmer,” Computer (Long Beach Calif), vol. 11, no. 4, pp. 34–41, 1978.</li>
+  <li>M. Ivankovi, G. Petrovi, R. Just, and G. Fraser, “Code coverage at Google,” in ESEC/FSE 2019 - Proceedings of the 2019 27th ACM Joint Meeting European Software Engineering Conference and Symposium on the Foundations of Software Engineering, Aug. 2019, pp. 955–963.</li>
+</ul>
+<h3 id="devops">
+  
+  
+    <a href="#devops" class="anchor-heading" aria-labelledby="devops"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> DevOps
+  
+  
+</h3>
+    
+<ul>
+  <li><a href="https://arxiv.org/pdf/2003.12808.pdf">“Towards Automating the AI Operations Lifecycle”, Arnold et al.</a></li>
+  <li><a href="https://arxiv.org/pdf/2010.02013.pdf">“Towards ML engineering: a brief history of TensorFlow Extended (TFX)”, Karmarkar et al.</a></li>
+  <li>Leonel Aguilar, David Dao, Shaoduo Gan, Nezihe Merve Gurel, Nora Hollenstein, Jiawei Jiang, Bojan Karlas, Thomas Lemmin, Tian Li, Yang Li, et al. Ease. ml: A lifecycle management system for mldev and mlops. Proc. of Innovative Data Systems Research, 2021.</li>
+  <li>Alex Serban, Koen van der Blom, Holger Hoos, and Joost Visser. Adoption and effects of software engineering best practices in machine learning. In Proceedings of the 14th ACM/IEEE International Symposium on Empirical Software Engineering and Measurement (ESEM), pages 1–12, 2020.</li>
+  <li>Nadia Nahar, Shurui Zhou, Grace Lewis, and Christian Kästner. Collaboration challenges in building ml-enabled systems: Communication, documentation, engineering, and process. In Proceedings of the 44th International Conference on Software Engineering, pages 413–425, 2022.</li>
+  <li>Tongfei Chen, Jirı́ Navrátil, Vijay Iyengar, and Karthikeyan Shanmugam. Confidence scoring using whitebox meta-models with linear classifier probes. In The 22nd International Conference on Artificial Intelligence and Statistics, pages 1467–1475. PMLR, 2019.</li>
+  <li>Neil Houlsby, Andrei Giurgiu, Stanislaw Jastrzebski, Bruna Morrone, Quentin De Laroussilhe, Andrea Gesmundo, Mona Attariyan, and Sylvain Gelly. Parameter-efficient transfer learning for nlp. In International Conference on Machine Learning, pages 2790–2799. PMLR, 2019.</li>
+  <li><a href="https://doi.org/10.1145/3416504.3424334">“Testing Practices for Infrastructure as Code”, Hasan et al.</a></li>
+  <li>Hummer, W., Rosenberg, F., Oliveira, F., &amp; Eilam, T. (2013). Testing Idempotence for Infrastructure as Code. In D. Eyers &amp; K. Schwan (Eds.), Middleware 2013 (pp. 368–388). Berlin, Heidelberg: Springer Berlin Heidelberg.</li>
+  <li><a href="https://doi.org/10.1145/3359981">“Survey of DevOps Concepts and Challenges”, Leite et al.</a></li>
+  <li><a href="https://doi.org/10.1109/ICSE.2019.00033">“The Seven Sins: Security Smells in Infrastructure as Code Scripts”, Rahman et al.</a></li>
+  <li><a href="https://doi.org/10.1109/ICSME52107.2021.00048">“CI/CD Pipelines Evolution and Restructuring: A Qualitative and Quantitative Study”, Zampetti et al.</a></li>
+  <li><a href="https://doi.org/10.1109/ICSE-Companion52605.2021.00075">“An Evolutionary Study of Configuration Design and Implementation in Cloud Systems”, Zhang et al.</a></li>
+</ul>
+<h3 id="expertise-and-knowledge-sharing">
+  
+  
+    <a href="#expertise-and-knowledge-sharing" class="anchor-heading" aria-labelledby="expertise-and-knowledge-sharing"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Expertise and knowledge sharing
+  
+  
+</h3>
+    
+<ul>
+  <li>R. Kavitha and M. Irfan Ahmed, “A knowledge management framework for agile software development teams,” in 2011 International Conference on Process Automation, Control and Computing, pp. 1–5, 2011.</li>
+  <li>S. Mirhosseini and C. Parnin, “Docable: Evaluating the executability of software tutorials,” in Proceedings of the 28th ACM Joint Meeting on European Software Engineering Conferencve and Symposium on the Foundations of Software Engineering, ESEC/FSE 2020, (New York, NY, USA), p. 375–385, Association for Computing Machinery, 2020.</li>
+  <li>A. Horvath, M. X. Liu, R. Hendriksen, C. Shannon, E. Paterson, K. Jawad, A. Macvean, and B. A. Myers, “Understanding how programmers can use annotations on documentation,” in Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems, CHI ’22, (New York, NY, USA), Association for Computing Machinery, 2022.</li>
+  <li>T. D. LaToza, M. Arab, D. Loksa, and A. J. Ko, “Explicit programming strategies,” Empirical Software Engineering, vol. 25, no. 4, p. 2416–2449, 2020.</li>
+  <li><a href="https://eprints.qut.edu.au/50068/">“Social media and tacit knowledge sharing: Developing a conceptual model”, Panahi et al.</a></li>
+  <li><a href="https://ieeexplore.ieee.org/document/8818832">“An exploratory study of live-streamed programming”, Alaboudi and  LaToza</a></li>
+  <li><a href="https://ieeexplore.ieee.org/document/7498605">“How social and communication channels shape and challenge a participatory culture in software development”, Storey et al.</a></li>
+  <li><a href="https://doi.org/10.1109/ICPC.2017.26">“Analyzing user comments on YouTube coding tutorial videos”, Poché et al.</a></li>
+  <li><a href="https://doi.org/10.1145/2568225.2568315">“Influence of social and technical factors for evaluating contribution in GitHub”, Tsay et al.</a></li>
+  <li>S. Baltes and S. Diehl, “Towards a theory of software development expertise,” ESEC/FSE 2018: Proceedings of the 2018 26th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering, pp. 187-200, 2018.</li>
+  <li>F. O. Bjørnson and T. Dingsøyr, “Knowledge management in software engineering: A systematic review of studied concepts, findings and research methods used,” Information and Software Technology, vol. 50, no. 11, pp. 1055-1068, 2008.</li>
+  <li>M. Zhou and A. Mockus, “Developer fluency: achieving true mastery in software projects,”FSE ‘10: Proceedings of the eighteenth ACM SIGSOFT international symposium on Foundations of software engineering, pp. 137-146, 2010.</li>
+  <li>M. Caulo, B. Lin, G. Bavota, G. Scanniello and M. Lanza, “Knowledge Transfer in Modern Code Review,” ICPC ‘20: Proceedings of the 28th International Conference on Program</li>
+  <li>C. Treude and M.-A. Storey, “Effective communication of software development knowledge through community portals,” ESEC/FSE ‘11: Proceedings of the 19th ACM SIGSOFT symposium and the 13th European conference on Foundations of software engineering, pp. 91-101, 2011.</li>
+</ul>
+<h3 id="security">
+  
+  
+    <a href="#security" class="anchor-heading" aria-labelledby="security"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Security
+  
+  
+</h3>
+    
+<ul>
+  <li><a href="https://doi.org/10.1007/978-3-030-52683-2_2">“Backstabber’s Knife Collection: A Review of Open-Source Software Supply Chain Attacks”, Ohm et al.</a></li>
+  <li><a href="http://doi.org/10.1109/ICSE43902.2021.00121">“Containing Malicious Package Updates in npm with a Lightweight Permission System”, Ferreira et al.</a></li>
+  <li><a href="https://doi.org/10.1145/3196398.3196401">“On the impact of security vulnerabilities in the npm package dependency network”, Decan et al.</a></li>
+  <li><a href="https://dx.doi.org/10.14722/ndss.2021.23055">“Towards Measuring Supply Chain Attacks on Package Managers for Interpreted Languages”, Duan et al.</a></li>
+</ul>
+<h3 id="software-engineering-in-specific-domains">
+  
+  
+    <a href="#software-engineering-in-specific-domains" class="anchor-heading" aria-labelledby="software-engineering-in-specific-domains"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Software engineering in specific domains
+  
+  
+</h3>
+    
+<h4 id="data-science">
+  
+  
+    <a href="#data-science" class="anchor-heading" aria-labelledby="data-science"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Data science
+  
+  
+</h4>
+    
+<ul>
+  <li><a href="https://doi.org/10.1145/3290605.3300500">“Managing Messes in Computational Notebooks”, Head et al.</a></li>
+  <li><a href="https://doi.org/10.1145/3576036">” Refactoring in Computational Notebooks”, Liu et al.</a></li>
+  <li><a href="https://doi.org/10.1007/s10664-021-09961-9">“Understanding and improving the quality and reproducibility of Jupyter notebooks”, Pimentel et al.</a></li>
+  <li><a href="https://doi.org/10.1145/3524610.3529156">“Error identification strategies for Python Jupyter notebooks”, Robinson et al.</a></li>
+  <li><a href="https://doi.org/10.1145/3510457.3513032">“A static analysis framework for data science notebooks”, Subotić et al.</a></li>
+  <li><a href="https://doi.org/10.1145/3408877.3432374">“Novice Reflections on Debugging”, Whalley et al.</a></li>
+  <li><a href="https://doi.org/10.1145/3290605.3300322">“Towards Effective Foraging by Data Scientists to Find Past Analysis Choices”, Kerry et al.</a></li>
+  <li><a href="https://doi.org/10.1145/3491102.3502123">“Diff in the Loop: Supporting Data Comparison in Exploratory Data Analysis”, Wang et al.</a></li>
+  <li>Jeremiah W Johnson. Benefits and pitfalls of jupyter notebooks in the classroom. In Proceedings of the 21st Annual Conference on Information Technology Education, pages 32–37, 2020.</li>
+  <li>Luigi Quaranta, Fabio Calefato, and Filippo Lanubile. Eliciting best practices for collaboration with
+computational notebooks. Proceedings of the ACM on Human-Computer Interaction, 6(CSCW1):1–41, 2022.</li>
+</ul>
+<h4 id="interactive-theorem-provers">
+  
+  
+    <a href="#interactive-theorem-provers" class="anchor-heading" aria-labelledby="interactive-theorem-provers"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Interactive theorem provers
+  
+  
+</h4>
+    
+<ul>
+  <li>A. W. Appel, “Coq’s vibrant ecosystem for verification engineering (invited talk),” in Proceedings of the 11th ACM SIGPLAN international conference on certified programs and proofs, 2022, pp. 2–11.</li>
+  <li>F. van Doorn, G. Ebner, and R. Y. Lewis, “Maintaining a library of formal mathematics,” in Intelligent computer mathematics: 13th international conference, CICM 2020, bertinoro, italy, july 26–31, 2020, proceedings, 2020, pp. 251–267.</li>
+  <li>K. Roe and S. Smith, “CoqPIE: An IDE aimed at improving proof development productivity: (Rough diamond),” in Interactive theorem proving: 7th international conference, ITP 2016, nancy, france, august 22-25, 2016, proceedings 7, 2016, pp. 491–499.</li>
+  <li>A. Celik, K. Palmskog, M. Parovic, E. J. G. Arias, and M. Gligoric, “Mutation analysis for coq,” in 2019 34th IEEE/ACM international conference on automated software engineering (ASE), 2019, pp. 539–551.</li>
+  <li>T. Ringer, R. Porter, N. Yazdani, J. Leo, and D. Grossman, “Proof repair across type equivalences,” in Proceedings of the 42nd ACM SIGPLAN international conference on programming language design and implementation, 2021, pp. 112–127.</li>
+</ul>
+<h4 id="healthcare">
+  
+  
+    <a href="#healthcare" class="anchor-heading" aria-labelledby="healthcare"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Healthcare
+  
+  
+</h4>
+    
+<ul>
+  <li>Alshayban, A., Ahmed, I., &amp; Malek, S. (2020, June). Accessibility issues in android apps: State of affairs, sentiments, and ways forward. In Proceedings
+of the ACM/IEEE 42nd International Conference on Software Engineering (pp. 1323-1334).</li>
+  <li>Perera, H., Hussain, W., Whittle, J., Nurwidyantoro, A., Mougouei, D., Shams, R. A., &amp; Oliver, G. (2020, June). A study on the prevalence of human values in software engineering publications, 2015-2018. In Proceedings of the ACM/IEEE 42nd International Conference on Software Engineering (pp. 409-420).</li>
+  <li>Beede, E., Baylor, E., Hersch, F., Iurchenko, A., Wilcox, L., Ruamviboonsuk, P., &amp; Vardoulakis, L. M. (2020, April). A human-centered evaluation of a deep learning system deployed in clinics for the detection of diabetic retinopathy. In Proceedings of the 2020 CHI conference on human factors in computing systems (pp. 1-12).</li>
+  <li>Garde, S., &amp; Knaup, P. (2006). Requirements engineering in health care: the example of chemotherapy planning in paediatric oncology. Requirements Engineering, 11, 265-278.</li>
+  <li>Sutcliffe, A., Sawyer, P., Liu, W., &amp; Bencomo, N. (2021, May). Investigating the potential impact of values on requirements and software engineering. In 2021 IEEE/ACM 43rd International Conference on Software Engineering: Software Engineering in Society (ICSE-SEIS) (pp. 39-47). IEEE.</li>
+</ul>
+<h3 id="program-understanding">
+  
+  
+    <a href="#program-understanding" class="anchor-heading" aria-labelledby="program-understanding"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Program understanding
+  
+  
+</h3>
+    
+<ul>
+  <li><a href="https://arxiv.org/abs/1906.11422v1">“Stepping OCaml”</a></li>
+  <li><a href="https://arxiv.org/abs/1108.4706">“Stepping lazy programs”</a></li>
+  <li><a href="https://plse.cs.washington.edu/daikon/pubs/machlearn-errors-icse2004-abstract.html">“Finding latent code errors via machine learning over program executions”</a></li>
+  <li><a href="https://plse.cs.washington.edu/daikon/pubs/xie-iscm-2004-abstract.html">“Checking Inside the Black Box: Regression Testing Based on Value Spectra Differences”</a></li>
+  <li><a href="https://dl.acm.org/doi/10.1145/1518701.1518942">“Finding Causes of Program Output with the Java Whyline”</a></li>
+</ul>
+
+        
+
+        
+
+        
+
+  <hr>
+  <footer>
+    
+
+    <p class="text-small text-grey-dk-100 mb-0">&copy; 2022 Jonathan Bell. Released under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license</p>
+
+    
+  </footer>
+
+
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+

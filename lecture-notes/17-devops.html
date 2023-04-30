@@ -1,0 +1,462 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/CS4910-7580-Spring-2023/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script src="/CS4910-7580-Spring-2023/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/CS4910-7580-Spring-2023/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Discussion - DevOps | CS4973/7580, Spring 2023</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Discussion - DevOps" />
+<meta name="author" content="Jonathan Bell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Northeastern University CS 4793/7580 “Advanced Software Engineering”, Spring 2023. Professor Jonathan Bell." />
+<meta property="og:description" content="Northeastern University CS 4793/7580 “Advanced Software Engineering”, Spring 2023. Professor Jonathan Bell." />
+<link rel="canonical" href="https://neu-se.github.io/CS4910-7580-Spring-2023/lecture-notes/17-devops" />
+<meta property="og:url" content="https://neu-se.github.io/CS4910-7580-Spring-2023/lecture-notes/17-devops" />
+<meta property="og:site_name" content="CS4973/7580, Spring 2023" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Discussion - DevOps" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Jonathan Bell"},"description":"Northeastern University CS 4793/7580 “Advanced Software Engineering”, Spring 2023. Professor Jonathan Bell.","url":"https://neu-se.github.io/CS4910-7580-Spring-2023/lecture-notes/17-devops","@type":"WebPage","headline":"Discussion - DevOps","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  <div class="side-bar">
+  <div class="site-header">
+    <a href="/CS4910-7580-Spring-2023/" class="site-title lh-tight">
+  CS4973/7580, Spring 2023
+
+</a>
+    <a href="#" id="menu-button" class="site-button">
+      <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+    </a>
+  </div>
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+    
+    
+      <ul class="nav-list"><li class="nav-list-item"><a href="#" class="nav-list-expander" aria-label="toggle links in Assessments category">
+            <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+          </a><a href="/CS4910-7580-Spring-2023/assessments/" class="nav-list-link">Assessments</a><ul class="nav-list"><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/paper-proposal/" class="nav-list-link">Reflection Paper Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-proposal/" class="nav-list-link">Preliminary Project Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/revised-project-proposal/" class="nav-list-link">Revised Project Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/paper/" class="nav-list-link">Reflection Paper</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-status-update/" class="nav-list-link">Project Status Update</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project/" class="nav-list-link">Implementation Project</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-showcase" class="nav-list-link">Project Showcase</a></li></ul></li><li class="nav-list-item active"><a href="/CS4910-7580-Spring-2023/calendar/" class="nav-list-link">Calendar</a></li><li class="nav-list-item"><a href="/CS4910-7580-Spring-2023/resources/" class="nav-list-link">Other Resources</a></li><li class="nav-list-item"><a href="/CS4910-7580-Spring-2023/policies/" class="nav-list-link">Policies</a></li></ul>
+    
+  </nav>
+
+  
+  
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  
+</div>
+
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search CS4973/7580, Spring 2023" aria-label="Search CS4973/7580, Spring 2023" autocomplete="off">
+    <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+    <nav aria-label="Auxiliary" class="aux-nav">
+  <ul class="aux-nav-list">
+    
+      <li class="aux-nav-list-item">
+        <a href="https://jonbell.net" class="site-button"
+          
+        >
+          Jonathan Bell
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+  
+</div>
+
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+  
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+      <ol class="breadcrumb-nav-list">
+        
+          <li class="breadcrumb-nav-list-item"><a href="/CS4910-7580-Spring-2023/calendar/">Calendar</a></li>
+        
+        <li class="breadcrumb-nav-list-item"><span>Discussion - DevOps</span></li>
+      </ol>
+    </nav>
+  
+
+
+      <div id="main-content" class="main-content" role="main">
+        
+          <div class="fs-1 text-right fw-300">Last updated:  | <a href="/CS4910-7580-Spring-2023/lecture-notes/17-devops">Permalink</a></div>
+<h1 id="discussion-devops-canopy--evolutionary-study-of-configuration-in-cloud">
+  
+  
+    <a href="#discussion-devops-canopy--evolutionary-study-of-configuration-in-cloud" class="anchor-heading" aria-labelledby="discussion-devops-canopy--evolutionary-study-of-configuration-in-cloud"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Discussion: DevOps (Canopy &amp; Evolutionary study of configuration in cloud)
+  
+  
+</h1>
+    
+<p>These notes roughly capture the (mostly unedited) comments from the class:</p>
+<h2 id="agenda">
+  
+  
+    <a href="#agenda" class="anchor-heading" aria-labelledby="agenda"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Agenda:
+  
+  
+</h2>
+    
+<ol>
+  <li>Administrative reminders
+    <ol>
+      <li>Reflection paper feedback and grades posted, reminder of <a href="https://neu-se.github.io/CS4910-7580-Spring-2023/policies/#grading">course grading policy</a>: 3 checks -&gt; A, check+ doesn’t impact grade</li>
+      <li>Project status update due Tuesday, 11am</li>
+      <li>Weeks 13 and 14 readings updated as discussed on Tuesday</li>
+    </ol>
+  </li>
+  <li>Follow-up and lingering questions from Tuesday’s DevOps lecture</li>
+  <li>Poll (https://PollEv.com/jbell)</li>
+  <li>Discussion: Canopy</li>
+  <li>Discussion: An Evolutionary Study of Configuration Design and Implementation in Cloud Systems</li>
+</ol>
+<h2 id="discussion-canopy">
+  
+  
+    <a href="#discussion-canopy" class="anchor-heading" aria-labelledby="discussion-canopy"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Discussion: Canopy
+  
+  
+</h2>
+    
+<ul>
+  <li>What is the problem that they are solving? What is the world that this system lives in?
+    <ul>
+      <li>What caused a crash? When you add 10 features at once, it is important to be able to precisely debug things</li>
+    </ul>
+  </li>
+  <li>What is hard about this, and makes it not just Log4J? (Or any other logging framework)
+    <ul>
+      <li>Performance debugging is hard - unobservable (make it observable)</li>
+      <li>Hard to correlate log statements, particularly across distributed system</li>
+      <li>What is the right level of granularity to use for logging: downsides are that too much takes too much space, too hard to understand</li>
+      <li>Logging is increasing attack surface</li>
+      <li>LOTS of concurrent debuggers, all trying to measure different things</li>
+    </ul>
+  </li>
+  <li>What is the methodology for doing this debugging?
+    <ul>
+      <li>Determine what it is potentially causing a problem, and then determine where to insert some tracing probes, and then insert them</li>
+    </ul>
+  </li>
+  <li>What is the design space?
+    <ul>
+      <li>Want to decouple: “How to determine what to log” from “what is the problem that we need to troubleshoot?”</li>
+      <li>Look to create a system for decision support for testing hypotheses</li>
+      <li>If we do not know where to put logging statements (based on the problem that occurs), where do they go?
+        <ul>
+          <li>Propose putting them in core blocks/areas - the model is really “log everything”
+            <ul>
+              <li>Provide an API</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>What are the downsides of “log everything”’
+    <ul>
+      <li>Hard to maintain performance – 1.16GB/sec</li>
+      <li>Capture a “Trace”
+        <ul>
+          <li>For a request: when the request enters system, assign an ID, for every component that processes that request, store log entries, along with the ID</li>
+          <li>Directed acyclic graph with dependencies</li>
+          <li>“Trace is sharded across backend processing pipeline by TraceID”
+            <ul>
+              <li>Can have a pool of 100 servers, assign a traceID to each server</li>
+              <li>After trace is captured, flushed to processor</li>
+              <li>SCUBA database stores the underlying log files</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Hard to analyze/gain insights
+        <ul>
+          <li>Start by isolating to analyze in specific components</li>
+          <li>Start by reducing the dataset (“feature extraction lambdas”)</li>
+        </ul>
+      </li>
+      <li>How to use as a developer debugging?
+        <ul>
+          <li>Examine data with extracted features, or create new feature extractors</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Design requirements that they fit within:
+    <ul>
+      <li>Don’t know in advance what we need to log or ask about</li>
+      <li>Don’t want to have to maintain a data format
+        <ul>
+          <li>Not worth it in terms of space: but also in terms of coordination</li>
+        </ul>
+      </li>
+      <li>Have to deal with a lot of different execution models
+        <ul>
+          <li>Server vs browser vs iPhone
+            <ul>
+              <li>Many requests on one server vs single thread of JS in browser vs device limitations</li>
+              <li>Constraints wrt bandwidth, power etc</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Evaluation
+    <ul>
+      <li>Canopy is a better tool than X?</li>
+      <li>Canopy doesn’t make my site too slow?</li>
+      <li>Canopy is useful? Do developers like it?
+        <ul>
+          <li>Reliance on case studies</li>
+          <li>It seems like it works</li>
+          <li>How could you even do a user study?</li>
+          <li>Is it still in use? How has it evolved?</li>
+          <li>A lot of information is better than 0 information</li>
+          <li>What other questions would you ask to study the interface?
+            <ul>
+              <li>If you were pitching Facebook: “Let’s make the interface for performance debugging better” what is that study?
+                <ul>
+                  <li>Find places where we found bugs before, do an A/B trial with the new and old interface to see ability to find the bug</li>
+                  <li>Fix the hypotheses: tell the engineer “here is the hypotheses you are trying to test” and see how long it takes and with what accuracy the human can test that</li>
+                  <li>Baseline: Compare aggregate traces to the raw ones?</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Does Canopy scale to Facebook?
+        <ul>
+          <li>Yes</li>
+          <li>“We tolerate more latency the further the latency is from us”
+            <ul>
+              <li>OK to be worse on phone browser than on server</li>
+              <li>“It is worth it” if it solves bigger problems</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<h2 id="discussion-an-evolutionary-study-of-configuration-design-and-implementation-in-cloud-systems">
+  
+  
+    <a href="#discussion-an-evolutionary-study-of-configuration-design-and-implementation-in-cloud-systems" class="anchor-heading" aria-labelledby="discussion-an-evolutionary-study-of-configuration-design-and-implementation-in-cloud-systems"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Discussion: An evolutionary study of configuration design and implementation in cloud systems
+  
+  
+</h2>
+    
+<h3 id="what-are-the-big-picture-questions-that-this-study-aims-to-answer">
+  
+  
+    <a href="#what-are-the-big-picture-questions-that-this-study-aims-to-answer" class="anchor-heading" aria-labelledby="what-are-the-big-picture-questions-that-this-study-aims-to-answer"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> What are the big-picture questions that this study aims to answer?
+  
+  
+</h3>
+    
+<ul>
+  <li>What is the current state of practice in the interface for configuring systems?</li>
+  <li>What are the objects that they study?
+    <ul>
+      <li>4 open-source applications
+        <ul>
+          <li>The configuration interface</li>
+          <li>The usage of those configuration values within the application</li>
+          <li>The documentation of those configuration options</li>
+          <li>OK with it being all Apache?
+            <ul>
+              <li>They <em>are</em> widely used</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>What is the overall story for significance?
+    <ul>
+      <li>Configuration design is something that should be considered a first-class software engineering problem
+        <ul>
+          <li>We should automatically check configurations after reading them in</li>
+          <li>Alarm-bell paper: “Facebook and google both had 15% of their failures come from misconfigurations!” But: developers of configurable software are not checking this carefully</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Methodology: How to find changes to these projects that impact configuration values
+    <ul>
+      <li>Keyword search for issues (and do manual examination)</li>
+      <li>Search the content of diffs for configuration-related keywords</li>
+      <li>Look for changes to program regions that use configurations</li>
+      <li>Might miss some “deep” aspects in the code that</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Not a question in this article:</p>
+<ul>
+  <li>How do configuration files used in deployed systems evolve over time?
+    <ul>
+      <li>Maybe could then improve the software as a result</li>
+      <li>Undocumented parameters are a horrible idea</li>
+      <li>What causes people to stray from the defaults?</li>
+    </ul>
+  </li>
+  <li>Is it important to study configurability?
+    <ul>
+      <li>Yes, because it goes to usability</li>
+      <li>But what systems?</li>
+      <li>What are actual configurations that induce failures?</li>
+    </ul>
+  </li>
+  <li>What is the relationship of configurability between open source and proprietary software?
+    <ul>
+      <li>What does the SQLite dev team think of this kind of configurability study?</li>
+    </ul>
+  </li>
+  <li>What for next time?
+    <ul>
+      <li>IaC over configuration?</li>
+    </ul>
+  </li>
+</ul>
+
+        
+
+        
+
+        
+
+  <hr>
+  <footer>
+    
+
+    <p class="text-small text-grey-dk-100 mb-0">&copy; 2022 Jonathan Bell. Released under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license</p>
+
+    
+  </footer>
+
+
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+

@@ -1,0 +1,577 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/CS4910-7580-Spring-2023/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script src="/CS4910-7580-Spring-2023/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/CS4910-7580-Spring-2023/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Discussion - Mutation vs Real Faults and Daikon | CS4973/7580, Spring 2023</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Discussion - Mutation vs Real Faults and Daikon" />
+<meta name="author" content="Jonathan Bell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Northeastern University CS 4793/7580 “Advanced Software Engineering”, Spring 2023. Professor Jonathan Bell." />
+<meta property="og:description" content="Northeastern University CS 4793/7580 “Advanced Software Engineering”, Spring 2023. Professor Jonathan Bell." />
+<link rel="canonical" href="https://neu-se.github.io/CS4910-7580-Spring-2023/lecture-notes/10-mutation-daikon" />
+<meta property="og:url" content="https://neu-se.github.io/CS4910-7580-Spring-2023/lecture-notes/10-mutation-daikon" />
+<meta property="og:site_name" content="CS4973/7580, Spring 2023" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Discussion - Mutation vs Real Faults and Daikon" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Jonathan Bell"},"description":"Northeastern University CS 4793/7580 “Advanced Software Engineering”, Spring 2023. Professor Jonathan Bell.","url":"https://neu-se.github.io/CS4910-7580-Spring-2023/lecture-notes/10-mutation-daikon","@type":"WebPage","headline":"Discussion - Mutation vs Real Faults and Daikon","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  <div class="side-bar">
+  <div class="site-header">
+    <a href="/CS4910-7580-Spring-2023/" class="site-title lh-tight">
+  CS4973/7580, Spring 2023
+
+</a>
+    <a href="#" id="menu-button" class="site-button">
+      <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+    </a>
+  </div>
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+    
+    
+      <ul class="nav-list"><li class="nav-list-item"><a href="#" class="nav-list-expander" aria-label="toggle links in Assessments category">
+            <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+          </a><a href="/CS4910-7580-Spring-2023/assessments/" class="nav-list-link">Assessments</a><ul class="nav-list"><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/paper-proposal/" class="nav-list-link">Reflection Paper Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-proposal/" class="nav-list-link">Preliminary Project Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/revised-project-proposal/" class="nav-list-link">Revised Project Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/paper/" class="nav-list-link">Reflection Paper</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-status-update/" class="nav-list-link">Project Status Update</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project/" class="nav-list-link">Implementation Project</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-showcase" class="nav-list-link">Project Showcase</a></li></ul></li><li class="nav-list-item active"><a href="/CS4910-7580-Spring-2023/calendar/" class="nav-list-link">Calendar</a></li><li class="nav-list-item"><a href="/CS4910-7580-Spring-2023/resources/" class="nav-list-link">Other Resources</a></li><li class="nav-list-item"><a href="/CS4910-7580-Spring-2023/policies/" class="nav-list-link">Policies</a></li></ul>
+    
+  </nav>
+
+  
+  
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  
+</div>
+
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search CS4973/7580, Spring 2023" aria-label="Search CS4973/7580, Spring 2023" autocomplete="off">
+    <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+    <nav aria-label="Auxiliary" class="aux-nav">
+  <ul class="aux-nav-list">
+    
+      <li class="aux-nav-list-item">
+        <a href="https://jonbell.net" class="site-button"
+          
+        >
+          Jonathan Bell
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+  
+</div>
+
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+  
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+      <ol class="breadcrumb-nav-list">
+        
+          <li class="breadcrumb-nav-list-item"><a href="/CS4910-7580-Spring-2023/calendar/">Calendar</a></li>
+        
+        <li class="breadcrumb-nav-list-item"><span>Discussion - Mutation vs Real Faults and Daikon</span></li>
+      </ol>
+    </nav>
+  
+
+
+      <div id="main-content" class="main-content" role="main">
+        
+          <div class="fs-1 text-right fw-300">Last updated:  | <a href="/CS4910-7580-Spring-2023/lecture-notes/10-mutation-daikon">Permalink</a></div>
+<h1 id="discussion-test-oracles-and-adequacy">
+  
+  
+    <a href="#discussion-test-oracles-and-adequacy" class="anchor-heading" aria-labelledby="discussion-test-oracles-and-adequacy"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Discussion: Test Oracles and Adequacy
+  
+  
+</h1>
+    
+<h2 id="agenda">
+  
+  
+    <a href="#agenda" class="anchor-heading" aria-labelledby="agenda"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Agenda:
+  
+  
+</h2>
+    
+<ol>
+  <li>Administrivia
+    <ol>
+      <li>Paper Proposal Feedback</li>
+      <li>Updated readings for next Tuesday</li>
+      <li>Flaky test and TotT follow-up</li>
+    </ol>
+  </li>
+  <li>Are mutants a valid substitute for real faults?</li>
+  <li>Dynamically Discovering Likely Program Invariants to Support Program Evolution</li>
+</ol>
+
+<p>These notes roughly capture the (mostly unedited) comments from the class:</p>
+<h3 id="are-mutants-a-valid-substitute-for-real-faults">
+  
+  
+    <a href="#are-mutants-a-valid-substitute-for-real-faults" class="anchor-heading" aria-labelledby="are-mutants-a-valid-substitute-for-real-faults"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Are mutants a valid substitute for real faults?
+  
+  
+</h3>
+    
+
+<ul>
+  <li>Why do we need to know the answer to this question?
+    <ul>
+      <li>We want to use mutation to assess the fault-finding ability of our tests - can we?</li>
+    </ul>
+  </li>
+  <li>Should it be: “are some mutants a valid substitute”?</li>
+  <li>What is hard about answering this question?
+    <ul>
+      <li>How to gather the dataset?
+        <ul>
+          <li>What is a “bug fix”? - Approach is to manually isolate the part of a commit that fixes a bug</li>
+        </ul>
+      </li>
+      <li>How to control for code coverage?
+        <ul>
+          <li>There could be a strong bias between code coverage and mutation</li>
+        </ul>
+      </li>
+      <li>How to run this experiment? - lots of CPU resources required, probably produces lots of output</li>
+      <li>How to get a broad enough dataset so that this might generalize?</li>
+    </ul>
+  </li>
+  <li>Overall experimental design?
+    <ul>
+      <li>Collect a bunch of isolated bugs</li>
+      <li>Collect tests that reveal those bugs</li>
+      <li>Generate more tests</li>
+      <li>Do mutation analysis on all of the test suites</li>
+      <li>Does a test suite that detects more mutants detect more faults?</li>
+    </ul>
+  </li>
+  <li>What is their definition of a “real fault?”
+    <ul>
+      <li>Start with 5 open source projects
+        <ul>
+          <li>Have issue tracker, have good version control</li>
+        </ul>
+      </li>
+      <li>Look for bug-fix commits
+        <ul>
+          <li>Manually inspect them</li>
+          <li>Discard faults that were not reproducible on the buggy commit
+            <ul>
+              <li>What was the procedure to determine reproducible? Required that a test existed already</li>
+              <li>Are mutants a valid substitute for faults that developers don’t write test cases for?</li>
+              <li>… are mutants a valid substitute for faults in distributed systems caused by exception handling bugs (OSDI 2014)?</li>
+            </ul>
+          </li>
+          <li>Ensured that there was only a single change in the commit  (tried to manually do this)</li>
+          <li>Discard commits where the only changes were to tests</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Where do developer tests come from?
+    <ul>
+      <li>(T_pass), (T_fail) For a specific commit, T_pass is the test suite that passes, T_fail differs by exactly one test case that reveals the test case (if there are multiple failing tests, it’s multiple pairs)</li>
+    </ul>
+  </li>
+  <li>What is a mutant?
+    <ul>
+      <li>What operators?
+        <ul>
+          <li>Replace constants</li>
+          <li>Replace operators</li>
+          <li>Modify branch conditions</li>
+          <li>Delete statements</li>
+        </ul>
+      </li>
+      <li>Where to apply mutations?
+        <ul>
+          <li>Applied to the classes that had been changed by the bug fix
+            <ul>
+              <li>Didn’t want to create a lot of “useless” mutants - OK to save time to do fewer</li>
+              <li>Assumption: a mutant in the same location as the bug will represent that bug
+                <ul>
+                  <li>Null hypothesis is that there is no correlation. Making more mutants could only IMPROVE the strength of the finding that there is a correlation</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Run the experiments
+    <ul>
+      <li>How to control for code coverage?
+        <ul>
+          <li>Only consider mutants that are covered by all of the tests</li>
+        </ul>
+      </li>
+      <li>RQ: Are real faults coupled to mutants generated by commonly used mutation operators?
+        <ul>
+          <li>If mutants are valid substitute, then any test suite with a higher fault detection rate should also have higher mutation score - “coupled” mutants and real faults</li>
+        </ul>
+      </li>
+      <li>RQ: What types of real faults are not coupled?
+        <ul>
+          <li>Manual analysis</li>
+        </ul>
+      </li>
+      <li>RQ: Is mutant detection correlated with real fault detection
+        <ul>
+          <li>Generate tests
+            <ul>
+              <li>Need more tests to make a conclusion if mutation score of a tests suite is actually correlated</li>
+              <li>Used three different tools: EvoSuite, Randoop, JCrasher.</li>
+            </ul>
+          </li>
+          <li>Compare mutation scores between test suites</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>What are results?
+    <ul>
+      <li>Are real fault scowled to mutants generated by commonly used mutation operators?
+        <ul>
+          <li>73% were coupled</li>
+        </ul>
+      </li>
+      <li>What was not coupled?
+        <ul>
+          <li>Some, they believe, can not be coupled:
+            <ul>
+              <li>“Incorrect algorithms” - cases where an algorithm had to be changed</li>
+            </ul>
+          </li>
+          <li>“Similar library method called”</li>
+          <li>Some faults required stronger mutation operators:
+            <ul>
+              <li>Statement deletion</li>
+              <li>Argument swapping</li>
+              <li>Argument omission</li>
+              <li>Similar library method called</li>
+            </ul>
+          </li>
+          <li>Here’s a less strong mutation operator:
+            <ul>
+              <li>x = x + 0</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Is mutant detection correlated with real fault detection?
+        <ul>
+          <li>Yes</li>
+          <li>Also, correlation between mutation detection and real fault detection stronger than coverage vs real fault detection</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Reactions
+    <ul>
+      <li>“are some mutants a valid substitute?”</li>
+      <li>Extremely careful and time-consuming methodology, come to valid and sound conclusions for the dataset, but does this dataset generalize?
+        <ul>
+          <li>More recent work shows that this still holds on bigger datasets built with same methodology, but what about changing the methodology? (What we consider a bug… also…. Languages? Just Java)</li>
+          <li>New context: bugs = student implementation of an assignment that failed an instructor-provided test
+            <ul>
+              <li>C, TypeScript</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<h2 id="dynamically-discovering-likely-program-invariants-to-support-program-evolution">
+  
+  
+    <a href="#dynamically-discovering-likely-program-invariants-to-support-program-evolution" class="anchor-heading" aria-labelledby="dynamically-discovering-likely-program-invariants-to-support-program-evolution"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Dynamically Discovering Likely Program Invariants to Support Program Evolution
+  
+  
+</h2>
+    
+
+<ul>
+  <li>What is the motivation?
+    <ul>
+      <li>There are implicit invariants in a programmer’s mind while coding, the program could be more robust if they were encoded
+        <ul>
+          <li>Example: <code class="language-plaintext highlighter-rouge">i</code> should monotonically increase in a for loop, or the bound of a loop should be set at som point</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>What makes it a likely program invariant?
+    <ul>
+      <li>Based on the tests, it was always true, but the tests might not be comprehensive</li>
+      <li>Are they “likely” or “possible”?
+        <ul>
+          <li>They define “likely” based on a probabilistic assumption that values are uniformly randomly distributed</li>
+          <li>Example: if <code class="language-plaintext highlighter-rouge">x==3</code> on every execution, but <code class="language-plaintext highlighter-rouge">x</code> is a 32-bit integer, it’s very unlikely that it would have happened every time</li>
+          <li>Case for possible:
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">Input a value in the range [3,4]</code> -&gt; <code class="language-plaintext highlighter-rouge">x</code></li>
+            </ul>
+          </li>
+          <li>Case for likely:
+            <ul>
+              <li>“Likely” based on developer acceptance</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>What is the use-case for program evolution?
+    <ul>
+      <li>If the maintainer becomes aware of the invariants, they will accept them, add them to code, and then this will help future developers/same developer to maintain the code</li>
+      <li>Can use this to generate invariants on-demand for specific regions, too</li>
+      <li>Maybe useful for fuzz testing: use as a fitness function to evaluate closeness to finding bugs. Or, in the 1999 terminology, good for finding edge cases :)</li>
+      <li>Assertions are helpful for evolution</li>
+      <li>There is a narrative explaining how this was helpful for augmenting a regex compiler</li>
+      <li>Would it be helpful to prune search space for model checking</li>
+    </ul>
+  </li>
+  <li>What are the challenges in detecting invariants?
+    <ul>
+      <li>Need to find the ones that are useful
+        <ul>
+          <li>What’s not a useful invariant?
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">const x = 3; //assert(x==3) assert(x!=4)</code></li>
+              <li>“This list is not sorted”</li>
+              <li>Probabilities, too…</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Where do the invariants come from?
+        <ul>
+          <li>Record a lot of things</li>
+          <li>Establish patterns for invariants
+            <ul>
+              <li>They are established in the paper</li>
+              <li>Only detect invariants for which there is a template</li>
+            </ul>
+          </li>
+          <li>Establish a threshold for “negative” invariants</li>
+          <li>Only consider possible invariants that include at most 3 variables?
+            <ul>
+              <li>It will take a long time to run</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Implementation details
+        <ul>
+          <li>Frontend/backend distinction
+            <ul>
+              <li>Frontend - records trace</li>
+              <li>Backend - infers likely invariants</li>
+              <li>Benefits?
+                <ul>
+                  <li>Can add new patterns and re-use the existing trace and frontend</li>
+                  <li>Can support multiple languages, just reuse the backend</li>
+                </ul>
+              </li>
+              <li>Could it have been more efficient to put frontend + backend together? What do we lose?
+                <ul>
+                  <li>Can’t infer while tracing - no feedback loop possible</li>
+                  <li>Stuck with variables that can be serialized into the trace format</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Evaluation
+        <ul>
+          <li>What was evaluated?
+            <ul>
+              <li>On the Gries program - do the inferred invariants match the textbook invariants? Yes</li>
+              <li>What were these “Gries programs”?
+                <ul>
+                  <li>Examples for teaching programming and invariants, demonstrate that it can find those “easy” invariants</li>
+                </ul>
+              </li>
+              <li>Scalability
+                <ul>
+                  <li>How long it takes to run the tracer</li>
+                  <li>How long it takes to find the invariants
+                    <ul>
+                      <li>450MhZ Pentium II</li>
+                      <li>“The engine has not been optimized for time and space”</li>
+                      <li>“We used interpreted language Python”</li>
+                    </ul>
+                  </li>
+                  <li>Relationship between number of tests and number of invariants</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Future studies?
+            <ul>
+              <li>How many invariants are useful vs useless? (User study)
+                <ul>
+                  <li>Of the invariants detected, who accepts them as useful/valid</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Inspirational?
+            <ul>
+              <li>Brilliant! Especially for large programs</li>
+              <li>Having examples can be a useful tool for developers - showing what values might be in different places in a program is useful</li>
+              <li>Still used/maintained, 30 years later!</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+        
+
+        
+
+        
+
+  <hr>
+  <footer>
+    
+
+    <p class="text-small text-grey-dk-100 mb-0">&copy; 2022 Jonathan Bell. Released under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license</p>
+
+    
+  </footer>
+
+
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+

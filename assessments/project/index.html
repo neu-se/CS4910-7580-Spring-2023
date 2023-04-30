@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/CS4910-7580-Spring-2023/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script src="/CS4910-7580-Spring-2023/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/CS4910-7580-Spring-2023/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Implementation Project | CS4973/7580, Spring 2023</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Implementation Project" />
+<meta name="author" content="Jonathan Bell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Description of Course Project" />
+<meta property="og:description" content="Description of Course Project" />
+<link rel="canonical" href="https://neu-se.github.io/CS4910-7580-Spring-2023/assessments/project/" />
+<meta property="og:url" content="https://neu-se.github.io/CS4910-7580-Spring-2023/assessments/project/" />
+<meta property="og:site_name" content="CS4973/7580, Spring 2023" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Implementation Project" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Jonathan Bell"},"description":"Description of Course Project","url":"https://neu-se.github.io/CS4910-7580-Spring-2023/assessments/project/","@type":"WebPage","headline":"Implementation Project","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  <div class="side-bar">
+  <div class="site-header">
+    <a href="/CS4910-7580-Spring-2023/" class="site-title lh-tight">
+  CS4973/7580, Spring 2023
+
+</a>
+    <a href="#" id="menu-button" class="site-button">
+      <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+    </a>
+  </div>
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+    
+    
+      <ul class="nav-list"><li class="nav-list-item active"><a href="#" class="nav-list-expander" aria-label="toggle links in Assessments category">
+            <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+          </a><a href="/CS4910-7580-Spring-2023/assessments/" class="nav-list-link">Assessments</a><ul class="nav-list"><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/paper-proposal/" class="nav-list-link">Reflection Paper Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-proposal/" class="nav-list-link">Preliminary Project Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/revised-project-proposal/" class="nav-list-link">Revised Project Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/paper/" class="nav-list-link">Reflection Paper</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-status-update/" class="nav-list-link">Project Status Update</a></li><li class="nav-list-item  active"><a href="/CS4910-7580-Spring-2023/assessments/project/" class="nav-list-link active">Implementation Project</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-showcase" class="nav-list-link">Project Showcase</a></li></ul></li><li class="nav-list-item"><a href="/CS4910-7580-Spring-2023/calendar/" class="nav-list-link">Calendar</a></li><li class="nav-list-item"><a href="/CS4910-7580-Spring-2023/resources/" class="nav-list-link">Other Resources</a></li><li class="nav-list-item"><a href="/CS4910-7580-Spring-2023/policies/" class="nav-list-link">Policies</a></li></ul>
+    
+  </nav>
+
+  
+  
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  
+</div>
+
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search CS4973/7580, Spring 2023" aria-label="Search CS4973/7580, Spring 2023" autocomplete="off">
+    <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+    <nav aria-label="Auxiliary" class="aux-nav">
+  <ul class="aux-nav-list">
+    
+      <li class="aux-nav-list-item">
+        <a href="https://jonbell.net" class="site-button"
+          
+        >
+          Jonathan Bell
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+  
+</div>
+
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+  
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+      <ol class="breadcrumb-nav-list">
+        
+          <li class="breadcrumb-nav-list-item"><a href="/CS4910-7580-Spring-2023/assessments/">Assessments</a></li>
+        
+        <li class="breadcrumb-nav-list-item"><span>Implementation Project</span></li>
+      </ol>
+    </nav>
+  
+
+
+      <div id="main-content" class="main-content" role="main">
+        
+          <h2 class="fs-6" id="implementation-project">
+  
+  
+    <a href="#implementation-project" class="anchor-heading" aria-labelledby="implementation-project"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 
+    
+    Implementation Project
+    
+    <strong class="label label-red">Due Tuesday April 18 2023, 11:00am EDT</strong>
+
+  
+  
+</h2>
+    
+
+
+<p>The project will involve a hands-on application of the techniques and tools that we discuss in class, and can be completed either individually or in a group of at most three. Topics for the project will be discussed in the first six weeks of class, and your specific project topic will be finalized soon after. Both research-oriented projects (which implement and evaluate some new idea) and engineering-oriented projects (which make contributions to tools that developers may already use) are welcomed. All projects must involve the implementation of some software artifact (e.g. building a new system, extending an existing one, or developing scripting to automate the evaluation of some system).</p>
+<h2 id="sample-project-ideas">
+  
+  
+    <a href="#sample-project-ideas" class="anchor-heading" aria-labelledby="sample-project-ideas"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Sample project ideas
+  
+  
+</h2>
+    
+<ul>
+  <li>Mining GitHub or other open source ecosystems to answer a software engineering research question</li>
+  <li>Conducting an evaluation of existing software engineering tools or frameworks in a new context (compared to existing evaluations)</li>
+  <li>Implementing new features for open source software engineering tools, for example: extensions to mutation testing tools, fuzzers, plugins for continuous integration platforms, etc.</li>
+  <li>Creating continuous integration workflows for automated performance testing of the <a href="https://github.com/neu-se/covey.town">covey.town</a> platform</li>
+  <li>Applying continuous integration and automated testing to an existing research project</li>
+</ul>
+
+<p>We will add to this list throughout the first few weeks of the semester, and students are welcomed to propose project ideas that aren’t from this list. Course projects that build on or extend students’ projects from outside of the course are welcomed.</p>
+
+<p>You will have five primary deliverables for the project: 1) <a href="/CS4910-7580-Spring-2023/asessments/project-proposal">a preliminary proposal outlining your project</a>, 2) <a href="/CS4910-7580-Spring-2023/assessments/revised-project-proposal/">a revised proposal</a>, 3) a [mid-semester status update]](/CS4910-7580-Spring-2023/assessments/project-status-update/), 4) a final report describing your project experience, and 5) the actual software artifact that you created in your project.</p>
+<h2 id="the-project-report">
+  
+  
+    <a href="#the-project-report" class="anchor-heading" aria-labelledby="the-project-report"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> The Project Report
+  
+  
+</h2>
+    
+<p>In addition to producing a code artifact (e.g. your project implementation), you will also write up a final project report that describes your experience implementing and evaluating your project. The maximum length of the project report is ten pages, not including figures and/or references. As they say, “a picture is worth a thousand words” — we expect that there will be at least some figures in every project report (e.g. architectural diagrams, screenshots, evaluation results, etc.). Please consider ten pages as an absolute upper-bound on length: shorter may be better than longer, and a 3-5 page report that contains everything that we need to know is fine.</p>
+
+<p>The final report should contain the following sections (feel free to add additional sections; the sections below are required):</p>
+<h3 id="introduction">
+  
+  
+    <a href="#introduction" class="anchor-heading" aria-labelledby="introduction"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Introduction
+  
+  
+</h3>
+    
+<p>Describe the project that you proposed (assuming that the reader of this report hasn’t read your project proposal). It is fine to copy and paste text from the project proposal here, if that text still applies. However, if you have made changes to your project topic based on feedback on the proposal, or based on experiences working on the project, be sure to describe here what you <em>actually</em> did, and not just what you originally planned to do.</p>
+<h3 id="project-results">
+  
+  
+    <a href="#project-results" class="anchor-heading" aria-labelledby="project-results"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Project Results
+  
+  
+</h3>
+    
+<p>Considering the overall project goals that you proposed, present the results or findings of your project, describing in detail what you learned from doing the project. Describe the technologies that you used, and how you used them. In this section, focus on goals that you successfully achieved, or that failing, concepts and technologies that you learned. If your project builds upon existing code, frameworks, scripts, tools, etc. built by you or someone else, be sure to clearly differentiate the work that you implemented for this project in this course, as opposed to work you or others may have done previously.</p>
+<h3 id="project-challenges">
+  
+  
+    <a href="#project-challenges" class="anchor-heading" aria-labelledby="project-challenges"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Project Challenges
+  
+  
+</h3>
+    
+<p>While it is possible that you successfully implemented your entire project without any challenges, it’s quite likely that you ran into a variety of challenges along the way. In some cases, you may have even discovered that the overall goals that you set out to achieve are simply not attainable (or at least, not attainable in the time frame allocated). That is absolutely fine, and for better or worse, is the price of working on research problems: if we knew the answer to these problems already, they wouldn’t be research!</p>
+
+<p>In this section, you should describe in detail challenges that you encountered, and what you did to try to work around them. If you ran into implementation-level challenges (e.g. difficulties with particular technologies, unescapable segfaults, etc) describe your hypothesis for <em>why</em> you might have run into this challenge, and any steps that you have taken to try to test that hypothesis/debug the situation. This section provides an opportunity for a project that has no working implementation at all to still receive a grade of “check” - if you could never get the project to work, but can describe various steps that you took to debug your project, you are still creating an artifact that demonstrates your understanding of advanced software engineering processes.</p>
+<h2 id="project-poster-presentation">
+  
+  
+    <a href="#project-poster-presentation" class="anchor-heading" aria-labelledby="project-poster-presentation"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Project Poster Presentation
+  
+  
+</h2>
+    
+<p>Create a poster that summarizes your project, including the introduction/motivation, the results, and challenges. We have no specific formatting requirements for the poster, but encourage you to use the space primarily for figures/images/tables rather than for blocks of text.</p>
+
+<p>To encourage interactivity, posters will be presented in two ways:</p>
+<ol>
+  <li>Asynchronously, via Discord: We will share all posters on Discord before class on the 18th. Students can review and comment on posters before they are presented.</li>
+  <li>During class time on the 18th and 20th, each group will provide a ~5-7 minute presentation of their poster (we will present the posters on the screen) and answer questions.</li>
+</ol>
+
+<p>We would like to collect posters and highlight them on the course website, allowing future students to get a sense for the kinds of projects that students have undertaken in the past. When we have done this in other classes, students have also later remarked that it was helpful for their project to be highlighted on the class website, as it provided a reputable URL that could be shared with potential employers or collaborators to simultaneously present the student’s work and contextualize it within the course. Please include a statement when you upload your poster as to whether you consent to the poster being shared publicly or not.</p>
+<h2 id="final-project-submission">
+  
+  
+    <a href="#final-project-submission" class="anchor-heading" aria-labelledby="final-project-submission"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Final Project Submission
+  
+  
+</h2>
+    
+<p>Create a zip file with your entire implementation artifact. Create a PDF with your report, and a separate PDF with your poster. Submit all three on Canvas by April 18 at 11:00am (use the assignment labeled “Implementation Project” for the implementation itself, “Report” for the report and “Poster” for the poster). No late submissions will be accepted.</p>
+<h2 id="grading-rubric">
+  
+  
+    <a href="#grading-rubric" class="anchor-heading" aria-labelledby="grading-rubric"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Grading Rubric
+  
+  
+</h2>
+    
+<p>Your project will be graded on the scale of (Unacceptable, Check-, Check, Check+). The criteria for each grade are described below:</p>
+
+<p>To receive the grade of <strong>Check</strong>, the project must satisfy all of these criteria:</p>
+<ul>
+  <li>The project proposal is submitted on time. The proposal is roughly one page long and includes a good-faith effort to address each of the 5 points outlined above.</li>
+  <li>The project status update is submitted on time. The status update is roughly 2-4 paragraphs long and includes a good-faith effort to address each of the 5 points outlined above.</li>
+  <li>The project includes a response to any feedback provided on the proposal: for any changes requested by the instructor, either those changes were accepted, or there is a discussion in the report of why those changes did not make sense.</li>
+  <li>The project report is between 3-10 pages long, contains at least the three sections outlined above, and captures your efforts on implementing your project</li>
+  <li>The project report and implementation are submitted on time</li>
+  <li>The project poster is submitted on time and summarizes the introduction/motivation to the project, the results, and any signfiicant challenges encountered</li>
+  <li>EITHER:
+    <ul>
+      <li>1) the project implementation successfully achieves the goals outlined, OR:</li>
+      <li>2) the “Project Challenges” section of the report describes in detail the challenges that you faced that prevented you from achieving some goal(s), and the steps that you took to try to overcome those challenges. The record of steps that you took to overcome those challenges is sufficiently detailed to demonstrate that you put a good-faith effort into getting it to work. The project status update supports this narrative.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>To receive the grade of <strong>Check-</strong>: the project must satisfy all of these criteria:</p>
+<ul>
+  <li>The project proposal is submitted on time. The proposal is roughly one page long and includes a good-faith effort to address each of the 5 points outlined above.</li>
+  <li>The project status update is submitted on time. The status update is roughly 2-4 paragraphs long and includes a good-faith effort to address each of the 5 points outlined above.</li>
+  <li>The project report is between 3-10 pages long, contains at least the three sections outlined above, with a good-faith effort to respond to the prompts.</li>
+  <li>The project report, implementation and/or poster are submitted on time</li>
+  <li>The project implementation may not achieve all of the goals outlined, the project challenges section may not include a detailed discussion of the challenges encountered and good-faith attempts to overcome those challenges.</li>
+</ul>
+
+<p>Submissions that do not meet the criteria for “Check-“ will receive the grade of “Unacceptable.” Submissions that exceed the qualities outlined for “Check” may receive the grade of “Check+”. As per the course policies, note that a grade of “Check” is sufficient to receive an A in the class.</p>
+
+        
+
+        
+
+        
+
+  <hr>
+  <footer>
+    
+
+    <p class="text-small text-grey-dk-100 mb-0">&copy; 2022 Jonathan Bell. Released under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license</p>
+
+    
+  </footer>
+
+
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+

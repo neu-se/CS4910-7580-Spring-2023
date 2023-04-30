@@ -1,0 +1,481 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/CS4910-7580-Spring-2023/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script src="/CS4910-7580-Spring-2023/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/CS4910-7580-Spring-2023/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Discussion - Data Science | CS4973/7580, Spring 2023</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Discussion - Data Science" />
+<meta name="author" content="Jonathan Bell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Northeastern University CS 4793/7580 “Advanced Software Engineering”, Spring 2023. Professor Jonathan Bell." />
+<meta property="og:description" content="Northeastern University CS 4793/7580 “Advanced Software Engineering”, Spring 2023. Professor Jonathan Bell." />
+<link rel="canonical" href="https://neu-se.github.io/CS4910-7580-Spring-2023/lecture-notes/20-data-science" />
+<meta property="og:url" content="https://neu-se.github.io/CS4910-7580-Spring-2023/lecture-notes/20-data-science" />
+<meta property="og:site_name" content="CS4973/7580, Spring 2023" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Discussion - Data Science" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Jonathan Bell"},"description":"Northeastern University CS 4793/7580 “Advanced Software Engineering”, Spring 2023. Professor Jonathan Bell.","url":"https://neu-se.github.io/CS4910-7580-Spring-2023/lecture-notes/20-data-science","@type":"WebPage","headline":"Discussion - Data Science","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  <div class="side-bar">
+  <div class="site-header">
+    <a href="/CS4910-7580-Spring-2023/" class="site-title lh-tight">
+  CS4973/7580, Spring 2023
+
+</a>
+    <a href="#" id="menu-button" class="site-button">
+      <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+    </a>
+  </div>
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+    
+    
+      <ul class="nav-list"><li class="nav-list-item"><a href="#" class="nav-list-expander" aria-label="toggle links in Assessments category">
+            <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+          </a><a href="/CS4910-7580-Spring-2023/assessments/" class="nav-list-link">Assessments</a><ul class="nav-list"><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/paper-proposal/" class="nav-list-link">Reflection Paper Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-proposal/" class="nav-list-link">Preliminary Project Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/revised-project-proposal/" class="nav-list-link">Revised Project Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/paper/" class="nav-list-link">Reflection Paper</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-status-update/" class="nav-list-link">Project Status Update</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project/" class="nav-list-link">Implementation Project</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-showcase" class="nav-list-link">Project Showcase</a></li></ul></li><li class="nav-list-item active"><a href="/CS4910-7580-Spring-2023/calendar/" class="nav-list-link">Calendar</a></li><li class="nav-list-item"><a href="/CS4910-7580-Spring-2023/resources/" class="nav-list-link">Other Resources</a></li><li class="nav-list-item"><a href="/CS4910-7580-Spring-2023/policies/" class="nav-list-link">Policies</a></li></ul>
+    
+  </nav>
+
+  
+  
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  
+</div>
+
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search CS4973/7580, Spring 2023" aria-label="Search CS4973/7580, Spring 2023" autocomplete="off">
+    <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+    <nav aria-label="Auxiliary" class="aux-nav">
+  <ul class="aux-nav-list">
+    
+      <li class="aux-nav-list-item">
+        <a href="https://jonbell.net" class="site-button"
+          
+        >
+          Jonathan Bell
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+  
+</div>
+
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+  
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+      <ol class="breadcrumb-nav-list">
+        
+          <li class="breadcrumb-nav-list-item"><a href="/CS4910-7580-Spring-2023/calendar/">Calendar</a></li>
+        
+        <li class="breadcrumb-nav-list-item"><span>Discussion - Data Science</span></li>
+      </ol>
+    </nav>
+  
+
+
+      <div id="main-content" class="main-content" role="main">
+        
+          <div class="fs-1 text-right fw-300">Last updated:  | <a href="/CS4910-7580-Spring-2023/lecture-notes/20-data-science">Permalink</a></div>
+<h1 id="discussion-notebooks-and-literate-programming">
+  
+  
+    <a href="#discussion-notebooks-and-literate-programming" class="anchor-heading" aria-labelledby="discussion-notebooks-and-literate-programming"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Discussion: Notebooks and literate programming
+  
+  
+</h1>
+    
+<h2 id="whats-wrong-with-computational-notebooks-pain-points-needs-and-design-opportunities">
+  
+  
+    <a href="#whats-wrong-with-computational-notebooks-pain-points-needs-and-design-opportunities" class="anchor-heading" aria-labelledby="whats-wrong-with-computational-notebooks-pain-points-needs-and-design-opportunities"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> What’s Wrong with Computational Notebooks? Pain Points, Needs, and Design Opportunities
+  
+  
+</h2>
+    
+<ul>
+  <li>Methodology: Field observations and exploratory interviews. Follow-up with survey
+    <ul>
+      <li>What is the strength of the field observations?
+        <ul>
+          <li>Do not rely on people to remember what they did, or to be able to describe it</li>
+        </ul>
+      </li>
+      <li>Sampling strategy</li>
+      <li>What is the role of the field study in the “mixed methods” methodology?
+        <ul>
+          <li>Exploratory - learn how people interact with notebooks in order to determine what questions to ask in the survey</li>
+          <li>“Limitations” paragraph sounds like a paragraph added in response to reviewer complaints</li>
+        </ul>
+      </li>
+      <li>Any concerns with this methodology?
+        <ul>
+          <li>Potential for bias from Hawthorne effect-  people behave differently when studied</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Pain points
+    <ul>
+      <li>What makes these pain points specific to data science, and not just pain points for programming? Or: What about data science makes these pain points even more painful?
+        <ul>
+          <li>Dependencies are painful in notebooks</li>
+          <li>Working with data: how to share the data and get access to it, share etc</li>
+          <li>Long-running computations - especially in the context of interactive programming, where you want to get the result quickly and then do something else based on that
+            <ul>
+              <li>Also limited in how many tasks a developer can do concurrently with one kernel (one)</li>
+            </ul>
+          </li>
+          <li>Reliability of the kernel - when it crashes it is bad. Especially bad when tied to something that’s long running</li>
+          <li>Tough to be both a documentation tool and a programming tool - it doesn’t do either as well as we wished. Misaligned between the tool and the use-cases
+            <ul>
+              <li>What are those use-cases?
+                <ul>
+                  <li>Debugging: When going through a notebook, there are data-centric debugging challenges. Might be many intermediate transformations, hard to see into them to understand what is changing</li>
+                  <li>Creating visualizations: How to specify what kind of figures are wanted</li>
+                  <li>Specific challenges around math/statistics</li>
+                  <li>Building and evaluating models: There is a lot of data that needs to be consumed to e.g. build the model, then a lot of time to compute it, then you end up with more stuff that needs to be stored (model and parameters)</li>
+                  <li></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>This is a means to an end for data scientists, and it’s not really a good one - jupyter notebooks is lacking what we would consider to be “good development tools”
+            <ul>
+              <li>Lacks flexibility for tools that “traditional software engineers” need/use in iDEs?</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>What about pain points that are specific TO CELLS and not just to data science?
+        <ul>
+          <li>Interactions with cells are clunky (key strokes, undo/redo)</li>
+          <li>Lack of visibility between the different cells. Copying/pasting a cell to somewhere else might have unexpected results</li>
+          <li>What the heck is the semantic definition for a cell? Is it a function? What is the functional unit?
+            <ul>
+              <li>How long is a “readable” cell?</li>
+              <li>Comments within cells vs markdown around cells - tensions..</li>
+            </ul>
+          </li>
+          <li>Line numbers usually disabled by default. This works great until you get an error. But, then when you get an error, it sure would help to know the line number. Line numbers start over in each cell</li>
+          <li>Is it a problem that cells can be run in different orders?
+            <ul>
+              <li>Some researchers feel it is a problem. Hard for reproducibility, good for exploration
+                <ul>
+                  <li>Solution: “Restart kernel, run all cells”</li>
+                  <li>Just because you CAN run cells out of order doesn’t mean that you should in all cases (or maybe there is some anti-pattern, or maybe there should be some guard rails)
+                    <ul>
+                      <li>When you are programming overall, there are certainly many things that you need to maintain in mental model in head, some things can get lost…</li>
+                    </ul>
+                  </li>
+                  <li>Another problem for reproducibility:
+                    <ul>
+                      <li>We have some data files that are stored on our computer, paths might be hard-coded</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>How do data scientists communicate their mental model of data flow in a notebook to each other?
+                <ul>
+                  <li>Intended to be top-to-bottom as a “narrative”. Maybe not supposed to be run out-of-order?</li>
+                  <li>Notebooks never intended to be reused in this kind of workflow - share and have someone else run it, then run automatically</li>
+                  <li>This is a constraining requirement</li>
+                  <li>Embedded execution order shows the last set of runs, but nothing about what happened before that</li>
+                  <li>Shows a slice of the workflow that generated the output in the notebook (which cells in which order, but not the history of those cells or their prior execution orders)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Is there an alternative to cells?
+            <ul>
+              <li>Immutable cells - once you run it, it becomes read only, can’t add new cells above previously executed cells</li>
+              <li>Integration with assistive technologies like 3D, virtual reality
+                <ul>
+                  <li>Organize cells in multiple dimensions</li>
+                </ul>
+              </li>
+              <li>See recent CHI paper “sticky land” or something like this - separate the output from the code</li>
+              <li>What about constraints that limit global mutability?
+                <ul>
+                  <li>At some point it just becomes a script with extra steps - and not a notebook anymore</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Pain points around versioning and sharing:
+            <ul>
+              <li>There is a lot of metadata in the file, and that metadata is being versioned, and will cause conflicts</li>
+              <li>The output in the notebooks also goes into version control, diff’ing the output is NOT FUN.</li>
+              <li>The output might be large (especially images)</li>
+              <li>Resolving merge conflicts in notebooks?
+                <ul>
+                  <li>NBDime</li>
+                </ul>
+              </li>
+              <li>What are the needs for versioning and sharing?
+                <ul>
+                  <li>“I am going to put this in git and version it there so that I can work on one of two machines at once”</li>
+                  <li>Useful to share so that someone can digest the output of a notebook</li>
+                  <li>Extract key pieces to be reused elsewhere (demo that functionality)</li>
+                  <li>Also might want to share all of the extra stuff (environment settings, the data, what versions of what libraries need to be installed)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Refactoring:
+            <ul>
+              <li>“For researchers, it’s important that we support the languages data scientists actually use, not the languages we /wish/they would use. “ - do we need languages without dynamic typing and reflection?
+                <ul>
+                  <li>Languages that run faster</li>
+                  <li>Less bug-prone/provide more of a safety net (especially in terms of type systems)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<h3 id="managing-messes">
+  
+  
+    <a href="#managing-messes" class="anchor-heading" aria-labelledby="managing-messes"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Managing Messes
+  
+  
+</h3>
+    
+<ul>
+  <li>What do we think of the characterization of “messes”? What precisely is a mess? Is this a common problem?
+    <ul>
+      <li>A “mess” is highly subjective
+        <ul>
+          <li>Is it a mess, or exploratory programming at its finest?</li>
+        </ul>
+      </li>
+      <li>3 types of messes:
+        <ul>
+          <li>“Disorder” (cells are run in a different order)
+            <ul>
+              <li>Is it really a problem to run in different orders? Does it impact output?</li>
+            </ul>
+          </li>
+          <li>“Deletion” (cell deleted but the content still there)
+            <ul>
+              <li>Possibly an issue for reproducibility</li>
+            </ul>
+          </li>
+          <li>“Dispersal” (code generating some results is spread across entire notebook, not in same area)
+            <ul>
+              <li>This is what they address in this work</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Presentation of the tool: the use case and discussion
+        <ul>
+          <li>Program slicing
+            <ul>
+              <li>Static</li>
+              <li>Dynamic</li>
+              <li>It is not very simple to determine a valid slice:
+                <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int a = 1;
+int b = 2;
+if(a == 1){
+  b = 3;
+}
+print(b); //slice on this
+</code></pre></div>                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int b = 2;
+int a = 1;
+Object foo = null;
+if(a == 1){
+	foo.bar();
+	b = 3;
+}
+print(b); //slice on this
+</code></pre></div></div>
+<ul>
+  <li>What would convince you to adopt this code gathering tool?
+    <ul>
+      <li>Is this a problem that you’ve had with notebooks before?</li>
+      <li>Does it solve that problem?
+        <ul>
+          <li>Maybe, but it also creates another mess: “clutter across notebooks” - code clones</li>
+          <li>What evaluation would or does demonstrate that this tool reduces code dispersal?
+            <ul>
+              <li>Is this tool intended to prevent messes from being created in the first place, or to manage the messes? - evaluation just shows managing</li>
+              <li>How to evaluate directly: “Are the resulting notebooks less messy?”</li>
+              <li>Qualitative analysis demonstrates feasibility on a system-focused paper</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>What are interesting future directions in “literate programming”? Considering notebooks, proof assistants, whatever…
+    <ul>
+      <li>Staging based on level of competency - provide easier paths to common solutions?</li>
+      <li>Develop more tools that are customized to the problems of notebooks. Code clones?</li>
+      <li>Do more user studies and collect more feedback to understand how these tools are used and what the challenges are
+        <ul>
+          <li>Use this as feedback to integrate better documentation and training</li>
+        </ul>
+      </li>
+      <li>How to link and cross-reference in notebooks?</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Some cool seminar on live and literate programming by Andrew Head - <a href="https://docs.google.com/document/d/19icrT54F4fFdTCL7GFnjp6B3uQiIbcZwCH26IRnZWkc/edit#">Syllabus: Live and Literate Programming - Google Docs</a>, <a href="https://docs.google.com/spreadsheets/d/1_k1B2wiKh8c6lT8oUg6EyOQRVZ4DULHgRIytCjYGCzc/edit#gid=1150769424">Course Schedule</a>, <a href="https://docs.google.com/document/d/1v9EfBihAbIIW4-eGSLDBF4Xvc_RG6dtTs6Yz39B53jU/edit#heading=h.rc5arqe791m6">Readings</a></p>
+
+        
+
+        
+
+        
+
+  <hr>
+  <footer>
+    
+
+    <p class="text-small text-grey-dk-100 mb-0">&copy; 2022 Jonathan Bell. Released under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license</p>
+
+    
+  </footer>
+
+
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+

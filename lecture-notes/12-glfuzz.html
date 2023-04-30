@@ -1,0 +1,486 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/CS4910-7580-Spring-2023/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script src="/CS4910-7580-Spring-2023/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/CS4910-7580-Spring-2023/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Discussion - Fuzzing | CS4973/7580, Spring 2023</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Discussion - Fuzzing" />
+<meta name="author" content="Jonathan Bell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Northeastern University CS 4793/7580 “Advanced Software Engineering”, Spring 2023. Professor Jonathan Bell." />
+<meta property="og:description" content="Northeastern University CS 4793/7580 “Advanced Software Engineering”, Spring 2023. Professor Jonathan Bell." />
+<link rel="canonical" href="https://neu-se.github.io/CS4910-7580-Spring-2023/lecture-notes/12-glfuzz" />
+<meta property="og:url" content="https://neu-se.github.io/CS4910-7580-Spring-2023/lecture-notes/12-glfuzz" />
+<meta property="og:site_name" content="CS4973/7580, Spring 2023" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Discussion - Fuzzing" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Jonathan Bell"},"description":"Northeastern University CS 4793/7580 “Advanced Software Engineering”, Spring 2023. Professor Jonathan Bell.","url":"https://neu-se.github.io/CS4910-7580-Spring-2023/lecture-notes/12-glfuzz","@type":"WebPage","headline":"Discussion - Fuzzing","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  <div class="side-bar">
+  <div class="site-header">
+    <a href="/CS4910-7580-Spring-2023/" class="site-title lh-tight">
+  CS4973/7580, Spring 2023
+
+</a>
+    <a href="#" id="menu-button" class="site-button">
+      <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+    </a>
+  </div>
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+    
+    
+      <ul class="nav-list"><li class="nav-list-item"><a href="#" class="nav-list-expander" aria-label="toggle links in Assessments category">
+            <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+          </a><a href="/CS4910-7580-Spring-2023/assessments/" class="nav-list-link">Assessments</a><ul class="nav-list"><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/paper-proposal/" class="nav-list-link">Reflection Paper Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-proposal/" class="nav-list-link">Preliminary Project Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/revised-project-proposal/" class="nav-list-link">Revised Project Proposal</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/paper/" class="nav-list-link">Reflection Paper</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-status-update/" class="nav-list-link">Project Status Update</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project/" class="nav-list-link">Implementation Project</a></li><li class="nav-list-item "><a href="/CS4910-7580-Spring-2023/assessments/project-showcase" class="nav-list-link">Project Showcase</a></li></ul></li><li class="nav-list-item active"><a href="/CS4910-7580-Spring-2023/calendar/" class="nav-list-link">Calendar</a></li><li class="nav-list-item"><a href="/CS4910-7580-Spring-2023/resources/" class="nav-list-link">Other Resources</a></li><li class="nav-list-item"><a href="/CS4910-7580-Spring-2023/policies/" class="nav-list-link">Policies</a></li></ul>
+    
+  </nav>
+
+  
+  
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  
+</div>
+
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search CS4973/7580, Spring 2023" aria-label="Search CS4973/7580, Spring 2023" autocomplete="off">
+    <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+    <nav aria-label="Auxiliary" class="aux-nav">
+  <ul class="aux-nav-list">
+    
+      <li class="aux-nav-list-item">
+        <a href="https://jonbell.net" class="site-button"
+          
+        >
+          Jonathan Bell
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+  
+</div>
+
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+  
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+      <ol class="breadcrumb-nav-list">
+        
+          <li class="breadcrumb-nav-list-item"><a href="/CS4910-7580-Spring-2023/calendar/">Calendar</a></li>
+        
+        <li class="breadcrumb-nav-list-item"><span>Discussion - Fuzzing</span></li>
+      </ol>
+    </nav>
+  
+
+
+      <div id="main-content" class="main-content" role="main">
+        
+          <div class="fs-1 text-right fw-300">Last updated:  | <a href="/CS4910-7580-Spring-2023/lecture-notes/12-glfuzz">Permalink</a></div>
+<h1 id="discussion-fuzzing---automated-testing-of-graphics-shader-compilers-donaldson-et-al-2017">
+  
+  
+    <a href="#discussion-fuzzing---automated-testing-of-graphics-shader-compilers-donaldson-et-al-2017" class="anchor-heading" aria-labelledby="discussion-fuzzing---automated-testing-of-graphics-shader-compilers-donaldson-et-al-2017"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Discussion: Fuzzing - “Automated Testing of Graphics Shader Compilers.” (Donaldson et al 2017)
+  
+  
+</h1>
+    
+<h3 id="poll">
+  
+  
+    <a href="#poll" class="anchor-heading" aria-labelledby="poll"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Poll:
+  
+  
+</h3>
+    
+
+<p>To what extent do you think that this work could impact SE?
+Not very: 0
+Unsure/so-so: 5
+Very: 15</p>
+<ul>
+  <li>Coming up with those semantics-preserving changes for new langauges/domains can be tricky (also finding ones that are defect-revealing)</li>
+  <li>Having multiple implementations of shader compilers gives “more bang for buck” - find bugs in multiple implementations concurrently</li>
+  <li>An impressive effort</li>
+</ul>
+
+<p>To what extent do you think that the article is convincing that this is the best approach for testing graphics shader compilers?
+Not very: 0
+Unsure/so-so: 8
+Convinced: 11</p>
+<ul>
+  <li>Are there potential inconsistencies/biases based on the shaders that they used as inputs - would a qualitative analysis of the shaders help provide more confidence?</li>
+  <li>“High-value” bugs are a good target</li>
+</ul>
+<h3 id="context-and-background">
+  
+  
+    <a href="#context-and-background" class="anchor-heading" aria-labelledby="context-and-background"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Context and background
+  
+  
+</h3>
+    
+<ul>
+  <li>Why are graphics shader compilers difficult to test?
+    <ul>
+      <li>No “correct” answer</li>
+    </ul>
+  </li>
+  <li>Why not do “differential” testing - compare “fuzzily” the output of two compilers?
+    <ul>
+      <li>Requires multiple GPUs w/ benchmarks - need a precise definition of “equivalent”</li>
+      <li>Still need to determine which one has the bug</li>
+      <li>Vendor-specific extensions prevent this to be used fully</li>
+    </ul>
+  </li>
+  <li>What is the relationship between this work and testing approximate computing?
+    <ul>
+      <li>What is the rigorous definition of “close”? For shader compiler fuzzing, we might need to have a human evaluator (“the fog didn’t render but that was OK”)</li>
+    </ul>
+  </li>
+</ul>
+<h3 id="metamorphic-testing">
+  
+  
+    <a href="#metamorphic-testing" class="anchor-heading" aria-labelledby="metamorphic-testing"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Metamorphic testing
+  
+  
+</h3>
+    
+
+<p>Example: <code class="language-plaintext highlighter-rouge">sin(x)</code> we want to test, we don’t know what the outputs should be</p>
+
+<p>Metamorphic relation: Specify some property that describes a transformation of the input, and ac corresponding transformation on the output.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sin(-x)=-sin(x)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sin(2pi+x) = sin(x)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">integral from 0 to 2pi of sin(x) = 0</code></li>
+</ul>
+
+<p>What does this buy us in terms of being able to test things, example, <code class="language-plaintext highlighter-rouge">sin</code> function?</p>
+<ul>
+  <li>Provides a relationship from function inputs to outputs
+    <ul>
+      <li>Create “follow-on” inputs</li>
+    </ul>
+  </li>
+  <li>What is metamorphic relation in this context of GLFuzz?
+    <ul>
+      <li>Image generated by shader should be equivalent to the one generated by a shader with a semantics-preserving transformation applied</li>
+    </ul>
+  </li>
+  <li>What other domains might we be able to specify metamorphic relationships for, and maybe use to find bugs?
+    <ul>
+      <li>Machine learning - There are a lot of matrix multiplications, do relations over the multiplications.</li>
+      <li>SQL queries - semantics preserving transformations, or even some that are not preserving, but we understand (e.g. <code class="language-plaintext highlighter-rouge">LIMIT 10</code> should restrict number of rows)</li>
+      <li>Testing for data races - add no-ops into code might expose a data race (aka the semantics-preserving transformation)</li>
+      <li>Numerical analysis - know the different transformations, what is acceptable in terms of approximation</li>
+      <li>(Generally: computer algebra systems)</li>
+      <li>Image/video processing - semantics preserving transformations, but also identity transformations (crop it, should still be similar, etc)</li>
+      <li>Compiler testing - same as this paper. Property: semantics-preserving change to program should yield same compiled program/output</li>
+    </ul>
+  </li>
+</ul>
+<h3 id="what-is-motivation">
+  
+  
+    <a href="#what-is-motivation" class="anchor-heading" aria-labelledby="what-is-motivation"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> What is motivation?
+  
+  
+</h3>
+    
+<ul>
+  <li>Why do we care about shader compilers?
+    <ul>
+      <li>It produces nice graphics, looks good in a powerpoint</li>
+      <li>It’s also a nice research problem, because there is no easy/obvious way to do it</li>
+    </ul>
+  </li>
+  <li>All of the poor gamers need games to work right; safety.</li>
+  <li>Safety can be both from security perspective (exploit-freedom) and general correctness (crash-freedom)</li>
+  <li>Tesla almost definitely is using OpenGL :)</li>
+</ul>
+<h3 id="what-is-the-solution">
+  
+  
+    <a href="#what-is-the-solution" class="anchor-heading" aria-labelledby="what-is-the-solution"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> What is the solution?
+  
+  
+</h3>
+    
+
+<p>Apply semantics-preserving transformation to some inputs, run them, see if output is the same:
+<code class="language-plaintext highlighter-rouge">compileAndRun(P, I) = compileAndRun(f(P(I), I)</code>, where <code class="language-plaintext highlighter-rouge">f(x)</code> produces a semantically-equivalent program</p>
+
+<p>Given an input set of shaders…</p>
+<ol>
+  <li>How do they generate the variants?
+    <ol>
+      <li>Add dead-code of various kinds: <code class="language-plaintext highlighter-rouge">x = 1; if(x == 0){}</code>
+        <ol>
+          <li>Don’t just put empty blocks in there - copy/paste code from other shaders, <code class="language-plaintext highlighter-rouge">break</code> or a <code class="language-plaintext highlighter-rouge">continue</code>, just <code class="language-plaintext highlighter-rouge">return</code></li>
+        </ol>
+      </li>
+      <li>“Live code injection”
+        <ol>
+          <li>Copies some code that computes some local variables from one shader into another</li>
+          <li>Why copy code from another shader instead of generating from scratch?
+            <ol>
+              <li>There is some risk that what you generate could have some unexpected side-effect</li>
+              <li>It might be hard</li>
+              <li>Maybe it would be more likely to create something that would be recognized as a “real” bug</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>Mutate code with mathematical identities, <code class="language-plaintext highlighter-rouge">x=1*x</code>, <code class="language-plaintext highlighter-rouge">x=0 + x</code></li>
+      <li>Pack variables into a vector
+        <ol>
+          <li><code class="language-plaintext highlighter-rouge">x,y,z</code> -&gt; <code class="language-plaintext highlighter-rouge">q = vec(x,y,z)</code></li>
+        </ol>
+      </li>
+      <li>Q: Need to ensure that the control flow of the program is preserved so that it doesn’t unexpectedly crash (aka they make non-semantics-preserving changes )
+        <ol>
+          <li>Is there a guarantee that the changes are semantics-preserving? (No)</li>
+          <li>What is the risk if we make a non-semantics-preserving change?
+            <ol>
+              <li>False positives (report a bug when there isn’t)</li>
+            </ol>
+          </li>
+          <li>Every transformation needs to be reversible for minification</li>
+        </ol>
+      </li>
+      <li>Detecting “deviant” variations
+        <ol>
+          <li>Some heuristic for determining “similarity”</li>
+          <li>Build a histogram of the RGB distributions of each image</li>
+          <li>Compare distributions to determine if they are statistically different (chi-squared distance)</li>
+        </ol>
+      </li>
+      <li>Reduce/minifify the deviant variations
+        <ol>
+          <li>Reverse a random set of transformations, if not equivalent to original image, repeat until converges to local maxima</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+<h2 id="evaluation">
+  
+  
+    <a href="#evaluation" class="anchor-heading" aria-labelledby="evaluation"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Evaluation
+  
+  
+</h2>
+    
+<ul>
+  <li>What scale of bugs per-dollar should we be accepting of?
+    <ul>
+      <li>If we are Nvidia/arm…. :/</li>
+      <li>If we are a platform vendor, maybe we care a lot</li>
+      <li>If we are an application developer in, say, the medical domain, we might want/need to have some higher degree of certainty of whether our software generates correct visualizations on different hardware</li>
+    </ul>
+  </li>
+  <li>17 devices, 3 evaluation sets</li>
+  <li>1,000 shaders from GSLSSandbox.com, took 100 largest shaders that could be compiled</li>
+  <li>How do they choose to apply which transformation?
+    <ul>
+      <li>Randomly - “swarm testing”</li>
+    </ul>
+  </li>
+  <li>Identify false positives
+    <ul>
+      <li>Three fellow researchers, not involved in the project, indicate via a key-press whether each pair is visually distinguishable (how long?)</li>
+    </ul>
+  </li>
+  <li>Table 3 - the true positives and false positives by technique
+    <ul>
+      <li>Mutation is very productive, but it also is going to be most likely to introduce floating point errors that result in false positives</li>
+      <li>Could false positives be reduced? Does it matter?</li>
+    </ul>
+  </li>
+</ul>
+<h3 id="overall-discussion">
+  
+  
+    <a href="#overall-discussion" class="anchor-heading" aria-labelledby="overall-discussion"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Overall discussion
+  
+  
+</h3>
+    
+<ul>
+  <li>How to focus on detecting security vulnerabilities?
+    <ul>
+      <li>Identify shaders that are executing memory-risky parts of code?</li>
+      <li>Have no interest in checking the output images
+        <ul>
+          <li>But, having a frame-by-frame analysis is still important/valuable for finding those security issues</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Faster/easier way to get the same results?
+    <ul>
+      <li>How to make this a generic approach/architecture for testing compilers, with “semantics preserving changes?”
+        <ul>
+          <li>Need some engine for rewriting the code</li>
+          <li>Need some checker to determine whether the output of the programs is the same
+            <ul>
+              <li>Maybe easy, maybe hard?</li>
+            </ul>
+          </li>
+          <li>Need to be able to clearly specify the “semantics-preserving” part</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Is it valuable to find bugs in older software that may have been fixed already?
+    <ul>
+      <li>Yes: it shows that approach works. Maybe one could argue that this approach is “cheaper”?</li>
+      <li>And it means that developers really care about the bugs!</li>
+    </ul>
+  </li>
+</ul>
+
+        
+
+        
+
+        
+
+  <hr>
+  <footer>
+    
+
+    <p class="text-small text-grey-dk-100 mb-0">&copy; 2022 Jonathan Bell. Released under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license</p>
+
+    
+  </footer>
+
+
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+
